@@ -291,7 +291,14 @@ function getTracks2() {
     path: "music/beach house.mp3",               
     image: "resimler/hand.webp",                                                    
     spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",  
-  }]
+  },  
+  {
+    name: " i love you",               
+    artist: "Billie Eilish",             
+    path: "music/billie eilish - i love you.mp3",               
+    image: "resimler/piano.gif",                                                    
+    spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",  
+  },]
   track_list = value;
   curr_track.volume = volume_slider.value / 100; 
   track_index = 0;
