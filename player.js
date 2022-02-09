@@ -298,6 +298,13 @@ function getTracks2() {
     path: "music/billie eilish - i love you.mp3",               
     image: "resimler/piano.gif",                                                    
     spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",  
+  },
+  {
+    name: "Softcore",               
+    artist: "The Neighbourhood",             
+    path: "music/ Softcore.mp3",               
+    image: "resimler/ Softcore.gif",                                                    
+    spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",  
   },]
   track_list = value;
   curr_track.volume = volume_slider.value / 100; 
@@ -309,7 +316,7 @@ function getTracks2() {
 function getTracks3() {
   playlist_img.style.backgroundImage = "url('resimler/nightCity.jpg')";
   var value = [{
-    name: "進撃vc pf20130218巨人",                // Albüm ismi
+    name: "Shingeki no Kyojin Violin",                // Albüm ismi
     artist: "Hiroyuki Sawano",              // Sanatçı ismi
     path: "music/aot.mp3",                // Müziğin mp3 Konumu
     image: "resimler/aot.gif",               // Albüm resmi
