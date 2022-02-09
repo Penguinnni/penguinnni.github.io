@@ -306,6 +306,22 @@ function getTracks2() {
   fillTheMusicList(value,"S L O W E D + R E V E R B")
   pauseTrack();
 }
+function getTracks3() {
+  playlist_img.style.backgroundImage = "url('resimler/nightCity.jpg')";
+  var value = [{
+    name: "進撃vc pf20130218巨人",                // Albüm ismi
+    artist: "Hiroyuki Sawano",              // Sanatçı ismi
+    path: "music/aot.mp3",                // Müziğin mp3 Konumu
+    image: "resimler/aot.gif",               // Albüm resmi
+    spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",         // Müziğin url'i
+  },]
+  track_list = value;
+  curr_track.volume = volume_slider.value / 100; 
+  track_index = 0;
+  loadTrack(track_index);
+  fillTheMusicList(value,"C H I L L")
+  pauseTrack();
+}
 async function getTracks(playlist_id) {
   var spotifytracks = [];
   let apiurl = "https://api.spotify.com/v1/playlists/" + playlist_id + "/tracks?market=TR&fields=items(track(album(images)%2Cartists(name)%2Cname%2Cexternal_urls(spotify)%2Cpreview_url%2Chref))%2Cnext"
