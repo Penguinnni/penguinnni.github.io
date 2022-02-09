@@ -302,9 +302,16 @@ function getTracks2() {
   {
     name: "Softcore",               
     artist: "The Neighbourhood",             
-    path: "music/ Softcore.mp3",               
-    image: "resimler/ Softcore.gif",                                                    
+    path: "music/Softcore.mp3",               
+    image: "resimler/Softcore.gif",                                                    
     spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",  
+  },
+  {
+    name: "Shingeki no Kyojin Violin",           
+    artist: "Hiroyuki Sawano",             
+    path: "music/aot.mp3",                
+    image: "resimler/aot.gif",              
+    spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",    
   },]
   track_list = value;
   curr_track.volume = volume_slider.value / 100; 
