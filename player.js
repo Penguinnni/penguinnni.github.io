@@ -454,3 +454,9 @@ async function getTracks(playlist_id) {
   playlist_img.style.backgroundImage = "url(" +m.images[0].url+ ")";
   return spotifytracks;
 }
+function arrayRemoveItemByValue(arr, value) { 
+    
+  return arr.filter(function(ele){ 
+      return ele != value; 
+    });
+}
