@@ -26,6 +26,14 @@ let curr_track = document.createElement('audio');
 // Define the tracks that have to be played
 let track_list = [];
 
+let statusD = "disabled";
+
+window.addEventListener('load', (event) => {
+  console.log("zort")
+statusD = localStorage.getItem("RandomButtonStatus");
+ChangeRandomButtonColor();
+});
+
 function getTracksByPlaylistId(id,playlistName){
   getTracks(id).then(value => {
     track_list = value;
@@ -35,6 +43,21 @@ function getTracksByPlaylistId(id,playlistName){
     fillTheMusicList(value,playlistName)
   });
   pauseTrack();
+}
+function FillRandomTrackList(trackl) {
+  var x=[]
+      for (let i = 0; i < trackl.length; i++) {
+        x.push(i);
+      }
+      random_TrackList=x;
+}
+
+function fillTheMusicList(trackL,playlistName) {
+  var str="<div class=\"playlist\"><b><marquee>"+playlistName+"</marquee></b></div>";
+  trackL.map((item,index)=>{
+    str = str+"<div><div class=\"listeler\" onclick=\"playMusic("+index+")\" >"+item.name+"</div><br><hr><br></div>";
+  })
+  tracklist_right.innerHTML=str;
 }
 
 function fillTheMusicList(trackL,playlistName) {
@@ -66,9 +89,38 @@ function loadTrack(track_index) {
   curr_track.addEventListener("ended", nextTrack);
 }
 
-function randomTrack() {
-  Math.random()
+var random_TrackList=[]
+
+function GetRandomMusic(){
+  let randomTrack = Math.floor(Math.random()*random_TrackList.length);
+  let randomTrackindex=random_TrackList[randomTrack];
+  random_TrackList=arrayRemoveItemByValue(random_TrackList,randomTrackindex);
+  
+  return randomTrackindex;
 }
+
+    function randomAktif(){
+        if (statusD != "active"){
+            localStorage.setItem("RandomButtonStatus","active");
+            statusD = "active";
+            FillRandomTrackList(track_list);
+            ChangeRandomButtonColor();
+        }
+        else if (statusD == "active"){
+            localStorage.setItem("RandomButtonStatus","disabled");
+            random_TrackList=[];
+            statusD = "disabled";
+            ChangeRandomButtonColor();
+        }   
+    }
+    function ChangeRandomButtonColor() {
+        if (statusD != "active"){
+            $(".random-play").css("color","white"); 
+        }
+        else if (statusD == "active"){
+            $(".random-play").css("color","red"); 
+        }
+    }
 
 function openLink() {
   let url = track_list[track_index].spotify_url;
@@ -98,10 +150,23 @@ function pauseTrack() {
 }
 
 function nextTrack() {
-  if (track_index < track_list.length - 1)
-    track_index += 1;
-  else track_index = 0;
-  loadTrack(track_index);
+  if(statusD=="active"){
+    let i =GetRandomMusic();
+    if(i!=undefined)
+      console.log("index",i);
+    else{
+      FillRandomTrackList(track_list);
+      i=GetRandomMusic();
+    }
+    track_index=i;
+    loadTrack(i);
+  }
+  else{
+    if (track_index < track_list.length - 1)
+      track_index += 1;
+    else track_index = 0;
+    loadTrack(track_index);
+  }
   playTrack();
 }
 
@@ -205,7 +270,7 @@ function getTracks2() {
     name: "Just the Two of Us",          
     artist: "Grover Washington, Jr.",             
     path: "music/just the two of us.mp3",               
-    image: "resimler/jr.jpg",                                                    
+    image: "resimler/jr.gif",                                                    
     spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",  
   },
   {
