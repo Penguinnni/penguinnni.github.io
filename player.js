@@ -407,14 +407,14 @@ function getTracks3() {
     artist: "S İ M",             
     path: "music/Rumbling.mp3",                
     image: "resimler/aot2.gif",              
-    spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",    
+    spotify_url: "https://youtu.be/KHCIO7a3jSI",    
   },
   {
     name: "Shingeki no Kyojin Violin",                // Albüm ismi
     artist: "Hiroyuki Sawano",              // Sanatçı ismi
     path: "music/aot.mp3",                // Müziğin mp3 Konumu
     image: "resimler/aot.gif",               // Albüm resmi
-    spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",         // Müziğin url'i
+    spotify_url: "https://youtu.be/nAV_zyhC4EE",         // Müziğin url'i
   },]
   track_list = value;
   FillRandomTrackList(value);
