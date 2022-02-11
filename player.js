@@ -392,6 +392,7 @@ function getTracks2() {
     spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",    
   },            ] 
   track_list = value;
+  FillRandomTrackList(value);
   curr_track.volume = volume_slider.value / 100; 
   track_index = 0;
   loadTrack(track_index);
@@ -400,7 +401,15 @@ function getTracks2() {
 }
 function getTracks3() {
   playlist_img.style.backgroundImage = "url('resimler/nightCity.jpg')";
-  var value = [{
+  var value = [
+  {
+    name: "The Rumbling",           
+    artist: "S İ M",             
+    path: "music/Rumbling.mp3",                
+    image: "resimler/scout-troop.webp",              
+    spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",    
+  },
+  {
     name: "Shingeki no Kyojin Violin",                // Albüm ismi
     artist: "Hiroyuki Sawano",              // Sanatçı ismi
     path: "music/aot.mp3",                // Müziğin mp3 Konumu
@@ -408,10 +417,11 @@ function getTracks3() {
     spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",         // Müziğin url'i
   },]
   track_list = value;
+  FillRandomTrackList(value);
   curr_track.volume = volume_slider.value / 100; 
   track_index = 0;
   loadTrack(track_index);
-  fillTheMusicList(value,"C H I L L")
+  fillTheMusicList(value,"Attack On Titan")
   pauseTrack();
 }
 async function getTracks(playlist_id) {
