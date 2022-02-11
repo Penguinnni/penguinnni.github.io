@@ -29,7 +29,6 @@ let track_list = [];
 let statusD = "disabled";
 
 window.addEventListener('load', (event) => {
-  console.log("zort")
 statusD = localStorage.getItem("RandomButtonStatus");
 ChangeRandomButtonColor();
 });
