@@ -406,7 +406,7 @@ function getTracks3() {
     name: "The Rumbling",           
     artist: "S İ M",             
     path: "music/Rumbling.mp3",                
-    image: "resimler/scout-troop.webp",              
+    image: "resimler/aot2.gif",              
     spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",    
   },
   {
