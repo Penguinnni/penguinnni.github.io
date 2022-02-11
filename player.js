@@ -415,6 +415,13 @@ function getTracks3() {
     path: "music/aot.mp3",                // Müziğin mp3 Konumu
     image: "resimler/aot.gif",               // Albüm resmi
     spotify_url: "https://youtu.be/nAV_zyhC4EE",         // Müziğin url'i
+  },
+  {
+    name: "My War",           
+    artist: "カマッテ",             
+    path: "music/mw.mp3",                
+    image: "resimler/aot3.gif",              
+    spotify_url: "https://youtu.be/6TolbTZXDjI",    
   },]
   track_list = value;
   FillRandomTrackList(value);
