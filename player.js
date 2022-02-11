@@ -361,7 +361,7 @@ function getTracks2() {
     name: " i love you",               
     artist: "Billie Eilish",             
     path: "music/billie eilish - i love you.mp3",               
-    image: "resimler/piano.gif",                                                    
+    image: "resimler/grl.gif",                                                    
     spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",  
   },
   {
@@ -377,7 +377,21 @@ function getTracks2() {
     path: "music/aot.mp3",                
     image: "resimler/aot.gif",              
     spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",    
-  },] 
+  },
+  {
+    name: "Infinity",           
+    artist: "Jaymes Young",             
+    path: "music/infinity.mp3",                
+    image: "resimler/bridge.gif",              
+    spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",    
+  },
+  {
+    name: "Y O U N G",           
+    artist: "VACATIONS",             
+    path: "music/Young.mp3",                
+    image: "resimler/vase.gif",              
+    spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",    
+  },            ] 
   track_list = value;
   curr_track.volume = volume_slider.value / 100; 
   track_index = 0;
