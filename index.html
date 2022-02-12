@@ -384,7 +384,7 @@
                 </div>
                 <div class="slider_container">
                   <i class="fa fa-volume-down"></i>
-                  <input type="range" min="0" max="100" value="1" class="volume_slider" onmousemove="setVolume()" onchange="setVolume()">
+                  <input type="range" min="0" max="100" value="1" class="volume_slider" onmousemove="setVolume()" onchange="setVolume2()">
                   <i class="fa fa-volume-up"></i>
                 </div>
             </div>
@@ -417,7 +417,6 @@ for(var i=0;i<width/20;i++){
 }
 var multiplier=5;
 window.onload = function() {
-    console.log("başka bir şey");
     window.wallpaperRegisterAudioListener(wallpaperAudioListener);
     window.wallpaperPropertyListener={
         applyUserProperties: function(properties){
@@ -445,7 +444,7 @@ function windowAudioListener(audioArray){
     var sum=lowFreqs.reduce((a,b)=> a+b,0);
     leftRightAverageLowFreq=sum/lowFreqs.length;
 }
-
+shortcut.add("alt+shift+z", function() {playSong()});
 update()
 var lol=0
 function update(){
@@ -498,5 +497,6 @@ window.onresize=function(){
         dots.push(dot)
     }
 }
+
 </script>
 </html>
