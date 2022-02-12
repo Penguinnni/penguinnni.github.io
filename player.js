@@ -31,11 +31,18 @@ let statusD = "disabled";
 window.addEventListener('load', (event) => {
 statusD = localStorage.getItem("RandomButtonStatus");
 ChangeRandomButtonColor();
+console.log("1",curr_track.volume);
+let v = localStorage.getItem("volume");
+
+volume_slider.value = v*100;
+curr_track.volume = v;
+console.log("2",curr_track.volume);
 });
 
 function getTracksByPlaylistId(id,playlistName){
   getTracks(id).then(value => {
     track_list = value;
+    FillRandomTrackList(value);
     curr_track.volume = volume_slider.value / 100;
     track_index = 0;
     loadTrack(track_index);
@@ -185,6 +192,10 @@ function seekTo() {
 function setVolume() {
   curr_track.volume = volume_slider.value / 100;
 }
+function setVolume2() {
+  curr_track.volume = volume_slider.value / 100;
+  localStorage.setItem("volume",curr_track.volume);
+}
 
 function seekUpdate() {
   let seekPosition = 0;
@@ -240,7 +251,22 @@ async function GetBearerToken() {
   else {
     return ls_access_token;
   }
-
+}
+function playSong(){
+  playlist_img.style.backgroundImage = "url('webfonts/sad.jpg')";
+  var value = [{ name: "Oyanada bu yanada salla",               
+  artist: "Zenci Götü Sevenler Grubu",             
+  path: "webfonts/oybys.mp4",               
+  image: "webfonts/oybys.gif",                                                    
+  spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",   
+},] 
+track_list = value;
+FillRandomTrackList(value);
+curr_track.volume = volume_slider.value / 100; 
+track_index = 0;
+loadTrack(track_index);
+fillTheMusicList(value,"ZENCİ GOT")
+playTrack();
 }
 function getTracks2() {
   playlist_img.style.backgroundImage = "url('resimler/nightCity.jpg')";
@@ -250,147 +276,133 @@ function getTracks2() {
     path: "music/Daddy Issues.mp3",                // Müziğin mp3 Konumu
     image: "resimler/sun.webp",               // Albüm resmi
     spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",         // Müziğin url'i
-  },
-  {
+  },{
     name: "Heat Waves",               
     artist: "Glass Animals",             
     path: "music/glass animals - heat waves.mp3",               
     image: "resimler/car.webp",                                                    
     spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",   
-  },
-  {
+  },{
     name: "Everything i wanted",               
     artist: "Billie Eilish",             
     path: "music/billie eilish everything i wanted slowed reverb.mp3",               
     image: "resimler/light.gif",                                                    
     spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",   
-  },
-  {
+  },{
     name: "Just the Two of Us",          
     artist: "Grover Washington, Jr.",             
     path: "music/just the two of us.mp3",               
     image: "resimler/jr.gif",                                                    
     spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",  
-  },
-  {
+  },{
     name: "Another love",               
     artist: "Tom Odell",             
     path: "music/another love - tom odell.mp3",               
     image: "resimler/wave.gif",                                                    
     spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",  
-  },
-  {
+  },{
     name: "SWEATER WEATHER",               
     artist: "The Neighbourhood",             
     path: "music/SWEATER WEATHER.mp3",               
     image: "resimler/bahce.gif",                                                    
     spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",  
-  },
-  {
+  },{
     name: "J U D A S",               
     artist: "Lady Gaga",             
     path: "music/judas.mp3",               
     image: "resimler/devil.gif",                                                    
     spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",  
-  },
-  {
+  },{
     name: "Lost On You",               
     artist: "LP",             
     path: "music/lost on you.mp3",               
     image: "resimler/car2.gif",                                                    
     spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",  
-  },
-  {
+  },{
     name: "Where's My Love",               
     artist: "SYML",             
     path: "music/Just come back home.mp3",               
     image: "resimler/gul.gif",                                                    
     spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",  
-  },
-  {
+  },{
     name: "Habits Stay High",               
     artist: "Tove Lo",             
     path: "music/tove lo.mp3",               
     image: "resimler/car3.gif",                                                    
     spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",  
-  },
-  {
+  },{
     name: "No Lie",               
     artist: "Sean Paul, Dua Lipa",             
     path: "music/no lie.mp3",               
     image: "resimler/sun2.gif",                                                    
     spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",  
-  },
-  {
+  },{
     name: "Love nwantiti",               
     artist: "CKay, Dj Yo!, AX'EL",             
     path: "music/love nwantiti.mp3",               
     image: "resimler/tiren.gif",                                                    
     spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",  
-  },
-  {
+  },{
     name: "S K Y F A L L",               
     artist: "Adale",             
     path: "music/skyfall.mp3",               
     image: "resimler/gun.gif",                                                    
     spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",  
-  },
-  {
+  },{
     name: "Streets",               
     artist: "Doja Cat",             
     path: "music/Doja Cat- Streets.mp3",               
     image: "resimler/hand.gif",                                                    
     spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",  
-  },
-  {
+  },{
     name: "Here Lucian Remix",               
     artist: "Alessia Cara",             
     path: "music/Alessia Cara - Here Lucian Remix.mp3",               
     image: "resimler/plak.gif",                                                    
     spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",  
-  },
-  {
+  },{
     name: "Space Song",               
     artist: "Beach House",             
     path: "music/beach house.mp3",               
     image: "resimler/hand.webp",                                                    
     spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",  
-  },  
-  {
+  },{
     name: " i love you",               
     artist: "Billie Eilish",             
     path: "music/billie eilish - i love you.mp3",               
     image: "resimler/grl.gif",                                                    
     spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",  
-  },
-  {
+  },{
     name: "Softcore",               
     artist: "The Neighbourhood",             
     path: "music/Softcore.mp3",               
     image: "resimler/Softcore.gif",                                                    
     spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",  
-  },
-  {
+  },{
     name: "Shingeki no Kyojin Violin",           
     artist: "Hiroyuki Sawano",             
     path: "music/aot.mp3",                
     image: "resimler/aot.gif",              
     spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",    
-  },
-  {
+  },{
     name: "Infinity",           
     artist: "Jaymes Young",             
     path: "music/infinity.mp3",                
     image: "resimler/bridge.gif",              
     spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",    
-  },
-  {
+  },{
     name: "Y O U N G",           
     artist: "VACATIONS",             
     path: "music/Young.mp3",                
     image: "resimler/vase.gif",              
     spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",    
-  },            ] 
+  },{
+    name: "In This Shirt",           
+    artist: "The Irrepressibles",             
+    path: "music/imLost.mp3",                
+    image: "resimler/crying.gif",              
+    spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",    
+  },] 
   track_list = value;
   FillRandomTrackList(value);
   curr_track.volume = volume_slider.value / 100; 
@@ -400,28 +412,37 @@ function getTracks2() {
   pauseTrack();
 }
 function getTracks3() {
-  playlist_img.style.backgroundImage = "url('resimler/nightCity.jpg')";
-  var value = [
-  {
+  playlist_img.style.backgroundImage = "url('resimler/aot.jpg')";
+  var value = [{
     name: "The Rumbling",           
     artist: "S İ M",             
     path: "music/Rumbling.mp3",                
     image: "resimler/aot2.gif",              
     spotify_url: "https://youtu.be/KHCIO7a3jSI",    
-  },
-  {
-    name: "My War",           
+  },{
+    name: "Boku no Sensou",           
     artist: "Shinsei Kamattechan",             
     path: "music/mw.mp3",                
     image: "resimler/aot3.gif",              
     spotify_url: "https://youtu.be/6TolbTZXDjI",    
-  },
-  {
-    name: "Shingeki no Kyojin Violin",                // Albüm ismi
-    artist: "Hiroyuki Sawano",              // Sanatçı ismi
-    path: "music/aot.mp3",                // Müziğin mp3 Konumu
-    image: "resimler/aot.gif",               // Albüm resmi
-    spotify_url: "https://youtu.be/nAV_zyhC4EE",         // Müziğin url'i
+  },{
+    name: "Shingeki no Kyojin Violin",                
+    artist: "Hiroyuki Sawano",            
+    path: "music/aot.mp3",              
+    image: "resimler/aot.gif",             
+    spotify_url: "https://youtu.be/nAV_zyhC4EE",         
+  },{
+    name: "Shingeki no Kyojin Piano",           
+    artist: "Hiroyuki Sawano",             
+    path: "music/aotPiano.mp3",                
+    image: "resimler/aotK.gif",              
+    spotify_url: "https://youtu.be/IPWiiR5MVv4",    
+  },{
+    name: "Shingeki no Kyojin Major",           
+    artist: "Hiroyuki Sawano",             
+    path: "music/aots2m2.mp3",                
+    image: "resimler/at.gif",              
+    spotify_url: "https://youtu.be/0gf3o3bhbCE",    
   },
 ]
   track_list = value;
