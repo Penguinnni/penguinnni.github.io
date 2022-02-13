@@ -32,6 +32,11 @@ window.addEventListener('load', (event) => {
 statusD = localStorage.getItem("RandomButtonStatus");
 ChangeRandomButtonColor();
 let v = localStorage.getItem("volume");
+let lastPlaylist = JSON.parse(localStorage.getItem("lastPlaylist"));
+if(typeof lastPlaylist === 'object'){
+  getTracksByPlaylistId(lastPlaylist.playlistId,lastPlaylist.playlistName);
+}
+
 
 if(v!=undefined){
   volume_slider.value = v*100;
@@ -51,6 +56,7 @@ function getTracksByPlaylistId(id,playlistName){
     track_index = 0;
     loadTrack(track_index);
     fillTheMusicList(value,playlistName)
+    localStorage.setItem("lastPlaylist",JSON.stringify({playlistName:playlistName,playlistId:id}));
   });
   pauseTrack();
 }
