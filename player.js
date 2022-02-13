@@ -33,9 +33,22 @@ statusD = localStorage.getItem("RandomButtonStatus");
 ChangeRandomButtonColor();
 let v = localStorage.getItem("volume");
 let lastPlaylist = JSON.parse(localStorage.getItem("lastPlaylist"));
+console.log(lastPlaylist)
 if(typeof lastPlaylist === 'object'){
-  getTracksByPlaylistId(lastPlaylist.playlistId,lastPlaylist.playlistName);
+ 
+  switch(lastPlaylist.playlistId) {
+    case "slow":
+      getTracks2();
+      break;
+    case "aot":
+      getTracks3();
+      break;
+
+    default:
+      getTracksByPlaylistId(lastPlaylist.playlistId,lastPlaylist.playlistName);
+  }
 }
+
 
 
 if(v!=undefined){
@@ -419,6 +432,7 @@ function getTracks2() {
   track_index = 0;
   loadTrack(track_index);
   fillTheMusicList(value,"S L O W E D + R E V E R B")
+  localStorage.setItem("lastPlaylist",JSON.stringify({playlistName:"S L O W E D + R E V E R B",playlistId:"slow"}));
   pauseTrack();
 }
 function getTracks3() {
@@ -461,6 +475,7 @@ function getTracks3() {
   track_index = 0;
   loadTrack(track_index);
   fillTheMusicList(value,"Attack On Titan")
+  localStorage.setItem("lastPlaylist",JSON.stringify({playlistName:"Attack On Titan",playlistId:"aot"}));
   pauseTrack();
 }
 async function getTracks(playlist_id) {
