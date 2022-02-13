@@ -31,12 +31,16 @@ let statusD = "disabled";
 window.addEventListener('load', (event) => {
 statusD = localStorage.getItem("RandomButtonStatus");
 ChangeRandomButtonColor();
-console.log("1",curr_track.volume);
 let v = localStorage.getItem("volume");
 
-volume_slider.value = v*100;
-curr_track.volume = v;
-console.log("2",curr_track.volume);
+if(v!=undefined){
+  volume_slider.value = v*100;
+  curr_track.volume = v;
+  }
+  else{
+    volume_slider.value = 0.15*100;
+    curr_track.volume = 0.15;
+  }
 });
 
 function getTracksByPlaylistId(id,playlistName){
