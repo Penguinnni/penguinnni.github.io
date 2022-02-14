@@ -56,8 +56,8 @@ if(v!=undefined){
   curr_track.volume = v;
   }
   else{
-    volume_slider.value = 0.15*100;
-    curr_track.volume = 0.15;
+    volume_slider.value = 0.25*100;
+    curr_track.volume = 0.25;
   }
 });
 
