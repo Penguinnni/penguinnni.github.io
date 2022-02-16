@@ -425,6 +425,12 @@ function getTracks2() {
     path: "music/imLost.mp3",                
     image: "resimler/crying.gif",              
     spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",    
+  },{
+    name: "Pop Style",           
+    artist: "Drake",             
+    path: "music/pop-style.mp3",                
+    image: "resimler/car5.webp",              
+    spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",    
   },] 
   track_list = value;
   FillRandomTrackList(value);
