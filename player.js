@@ -309,7 +309,7 @@ function getTracks2() {
     name: "Everything i wanted",               
     artist: "Billie Eilish",             
     path: "music/billie eilish everything i wanted slowed reverb.mp3",               
-    image: "resimler/light.gif",                                                    
+    image: "resimler/light.webp",                                                    
     spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",   
   },{
     name: "Just the Two of Us",          
@@ -333,13 +333,13 @@ function getTracks2() {
     name: "J U D A S",               
     artist: "Lady Gaga",             
     path: "music/judas.mp3",               
-    image: "resimler/devil.gif",                                                    
+    image: "resimler/devil.webp",                                                    
     spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",  
   },{
     name: "Lost On You",               
     artist: "LP",             
     path: "music/lost on you.mp3",               
-    image: "resimler/car2.gif",                                                    
+    image: "resimler/car2.webp",                                                    
     spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",  
   },{
     name: "Where's My Love",               
@@ -351,7 +351,7 @@ function getTracks2() {
     name: "Habits Stay High",               
     artist: "Tove Lo",             
     path: "music/tove lo.mp3",               
-    image: "resimler/car3.gif",                                                    
+    image: "resimler/car3.webp",                                                    
     spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",  
   },{
     name: "No Lie",               
@@ -363,7 +363,7 @@ function getTracks2() {
     name: "Love nwantiti",               
     artist: "CKay, Dj Yo!, AX'EL",             
     path: "music/love nwantiti.mp3",               
-    image: "resimler/tiren.gif",                                                    
+    image: "resimler/tren.webp",                                                    
     spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",  
   },{
     name: "S K Y F A L L",               
@@ -447,7 +447,7 @@ function getTracks3() {
     name: "Boku no Sensou",           
     artist: "Shinsei Kamattechan",             
     path: "music/mw.mp3",                
-    image: "resimler/aot3.gif",              
+    image: "resimler/aot3.webp",              
     spotify_url: "https://youtu.be/6TolbTZXDjI",    
   },{
     name: "Shingeki no Kyojin Violin",                
