@@ -119,7 +119,7 @@ i.fa-volume-down, i.fa-volume-up {
 i.fa-play-circle, i.fa-pause-circle, i.fa-step-forward, i.fa-step-backward {
   cursor: pointer;
 }
-@media only screen and (max-height:800px){
+@media only screen and (max-height:700px){
   .track-art{
     height: 200px;
     width: 200px;
@@ -148,7 +148,7 @@ i.fa-play-circle, i.fa-pause-circle, i.fa-step-forward, i.fa-step-backward {
     font-size: 12px;
 }
 }
-@media only screen and (max-height:700px) {
+@media only screen and (max-height:600px) {
   .track-art {
       height: 200px;
       width: 200px;
