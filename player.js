@@ -403,12 +403,6 @@ function getTracks2() {
     image: "resimler/Softcore.gif",                                                    
     spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",  
   },{
-    name: "Shingeki no Kyojin Violin",           
-    artist: "Hiroyuki Sawano",             
-    path: "music/aot.mp3",                
-    image: "resimler/aot.gif",              
-    spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",    
-  },{
     name: "Infinity",           
     artist: "Jaymes Young",             
     path: "music/infinity.mp3",                
@@ -466,7 +460,7 @@ function getTracks3() {
     name: "Shingeki no Kyojin Violin",                
     artist: "Hiroyuki Sawano",            
     path: "music/aot.mp3",              
-    image: "resimler/aot.gif",             
+    image: "resimler/petra.gif",             
     spotify_url: "https://youtu.be/nAV_zyhC4EE",         
   },{
     name: "Shingeki no Kyojin Piano",           
@@ -480,6 +474,12 @@ function getTracks3() {
     path: "music/aots2m2.mp3",                
     image: "resimler/at.gif",              
     spotify_url: "https://youtu.be/0gf3o3bhbCE",    
+  },{
+    name: "Impact",           
+    artist: "Yuko Ando",             
+    path: "music/aote.mp3",                
+    image: "resimler/aot.gif",              
+    spotify_url: "https://youtu.be/oyuoCB-wolk",    
   },
 ]
   track_list = value;
