@@ -58,10 +58,6 @@ if(typeof lastPlaylist === 'object'){
   }
 }
 
-
-
-
-
 function getTracksByPlaylistId(id,playlistName){
   getTracks(id).then(value => {
     track_list = value;
@@ -432,6 +428,18 @@ function getTracks2() {
     path: "music/fantasy.mp3",                
     image: "resimler/black.gif",              
     spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",    
+  },{
+    name: "Shingeki no Kyojin Violin",                
+    artist: "Hiroyuki Sawano",            
+    path: "music/aot.mp3",              
+    image: "resimler/petra.gif",             
+    spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",         
+  },{
+    name: "Guilty Hero",                
+    artist: "Kohta Yamamoto",            
+    path: "music/aotGH.m4a",              
+    image: "resimler/yelena.gif",             
+    spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",         
   },] 
   track_list = value;
   FillRandomTrackList(value);
@@ -480,6 +488,12 @@ function getTracks3() {
     path: "music/aote.mp3",                
     image: "resimler/aot.gif",              
     spotify_url: "https://youtu.be/oyuoCB-wolk",    
+  },{
+    name: "Guilty Hero",                
+    artist: "Kohta Yamamoto",            
+    path: "music/aotGHO.m4a",              
+    image: "resimler/yelena.gif",             
+    spotify_url: "https://youtu.be/-q41OJu9fXM",         
   },
 ]
   track_list = value;
