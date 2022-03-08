@@ -271,6 +271,7 @@ async function GetBearerToken() {
   else {
     return ls_access_token;
   }
+}
 function getTracks2() {
   playlist_img.style.backgroundImage = "url('resimler/nightCity.jpg')";
   var value = [{
