@@ -271,23 +271,6 @@ async function GetBearerToken() {
   else {
     return ls_access_token;
   }
-}
-function playSong(){
-  playlist_img.style.backgroundImage = "url('webfonts/sad.jpg')";
-  var value = [{ name: "Oyanada bu yanada salla",               
-  artist: "Zenci Götü Sevenler Grubu",             
-  path: "webfonts/oybys.mp4",               
-  image: "webfonts/oybys.gif",                                                    
-  spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",   
-},] 
-track_list = value;
-FillRandomTrackList(value);
-curr_track.volume = volume_slider.value / 100; 
-track_index = 0;
-loadTrack(track_index);
-fillTheMusicList(value,"ZENCİ GOT")
-playTrack();
-}
 function getTracks2() {
   playlist_img.style.backgroundImage = "url('resimler/nightCity.jpg')";
   var value = [{
