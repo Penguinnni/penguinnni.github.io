@@ -197,8 +197,12 @@ function nextTrack() {
 }
 
 function prevTrack() {
-  if (track_index > 0)
+   if(seek_slider.value > 5 ){
+    seek_slider.value = 0;
+  }
+  if (track_index > 0){
     track_index -= 1;
+  }
   else track_index = track_list.length;
   loadTrack(track_index);
   playTrack();
