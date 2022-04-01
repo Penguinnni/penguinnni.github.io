@@ -441,6 +441,12 @@ function getTracks2() {
 function getTracks3() {
   playlist_img.style.backgroundImage = "url('resimler/aot.jpg')";
   var value = [{
+    name: "Guren No Yumiya",                
+    artist: "Linked Horizon",            
+    path: "music/aot-op1.opus",              
+    image: "resimler/aot-op1.webp",             
+    spotify_url: "https://youtu.be/8OkpRK2_gVs",         
+  },{
     name: "The Rumbling",           
     artist: "S İ M",             
     path: "music/Rumbling.mp3",                
