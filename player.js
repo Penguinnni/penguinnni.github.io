@@ -488,6 +488,12 @@ function getTracks3() {
     path: "music/aotGHO.m4a",              
     image: "resimler/yelena.gif",             
     spotify_url: "https://youtu.be/-q41OJu9fXM",         
+  },{
+    name: "Sasha",                
+    artist: "Hiroyuki Sawano",            
+    path: "music/sasha.ogg",              
+    image: "resimler/sasha.jpg",             
+    spotify_url: "https://youtu.be/eLYVoUl6Z1Q",         
   },
 ]
   track_list = value;
