@@ -197,8 +197,10 @@ function nextTrack() {
 }
 
 function prevTrack() {
-   if(seek_slider.value > 5 ){
+  console.log("yazı",curr_track.currentTime);
+   if(curr_track.currentTime > 5 ){
     seek_slider.value = 0;
+    
   }
   else if (track_index > 0){
     track_index -= 1;
@@ -224,7 +226,7 @@ function setVolume2() {
 function seekUpdate() {
   let seekPosition = 0;
 
-  if (!isNaN(curr_track.duration)) {
+  if (!isNaN(curr_track.duration)&&(isPlaying)) {
     seekPosition = curr_track.currentTime * (100 / curr_track.duration);
 
     seek_slider.value = seekPosition;
@@ -489,11 +491,23 @@ function getTracks3() {
     image: "resimler/yelena.gif",             
     spotify_url: "https://youtu.be/-q41OJu9fXM",         
   },{
+    name: "Eye Water",                
+    artist: "Hiroyuki Sawano",            
+    path: "music/eye-water.opus",              
+    image: "resimler/historia.gif",             
+    spotify_url: "https://youtu.be/YbJpH9to-9Y",         
+  },{
     name: "Sasha",                
     artist: "Hiroyuki Sawano",            
     path: "music/aot-sasha.ogg",              
     image: "resimler/sasha.jpg",             
     spotify_url: "https://youtu.be/eLYVoUl6Z1Q",         
+  },{
+    name: "Mikasa",                
+    artist: "Hiroyuki Sawano",            
+    path: "music/mikasa.opus",              
+    image: "resimler/mikasa.webp",             
+    spotify_url: "https://youtu.be/47RK0qI2DiI",         
   },
 ]
   track_list = value;
