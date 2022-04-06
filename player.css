@@ -110,6 +110,9 @@
 
 .current-time, .total-duration {
   padding: 10px;
+  width: 50px;
+  display:block;
+  text-align: center;
 }
 
 i.fa-volume-down, i.fa-volume-up {
@@ -146,6 +149,7 @@ i.fa-play-circle, i.fa-pause-circle, i.fa-step-forward, i.fa-step-backward {
 .total-duration {
     padding: 10px;
     font-size: 12px;
+    display:block;
 }
 }
 @media only screen and (max-height:600px) {
@@ -157,6 +161,7 @@ i.fa-play-circle, i.fa-pause-circle, i.fa-step-forward, i.fa-step-backward {
   .current-time,
   .total-duration {
       padding: 10px;
+      display:block;
   }
   i.fa-volume-down,
   i.fa-volume-up {
@@ -177,6 +182,7 @@ i.fa-play-circle, i.fa-pause-circle, i.fa-step-forward, i.fa-step-backward {
   .total-duration {
       padding: 10px;
       font-size: 12px;
+      display:block;
   }
   .track-name {
       font-size: 2rem;
