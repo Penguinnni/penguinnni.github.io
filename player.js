@@ -494,7 +494,7 @@ function getTracks3() {
     name: "Eye Water",                
     artist: "Hiroyuki Sawano",            
     path: "music/eye-water.opus",              
-    image: "resimler/historia.gif",             
+    image: "resimler/eren-mikasa.jpg",             
     spotify_url: "https://youtu.be/YbJpH9to-9Y",         
   },{
     name: "Sasha",                
@@ -508,6 +508,24 @@ function getTracks3() {
     path: "music/mikasa.opus",              
     image: "resimler/mikasa.webp",             
     spotify_url: "https://youtu.be/47RK0qI2DiI",         
+  },{
+    name: "Historia",                
+    artist: "Hiroyuki Sawano",            
+    path: "music/historia.opus",              
+    image: "resimler/historia.gif",             
+    spotify_url: "https://youtu.be/vtHUnElgkD8",         
+  },{
+    name: "AttackD",                
+    artist: "Hiroyuki Sawano",            
+    path: "music/attackd.opus",              
+    image: "resimler/eren.gif",             
+    spotify_url: "https://youtu.be/c7NMfDeIMHs",         
+  },{
+    name: "ThanksAT",                
+    artist: "Hiroyuki Sawano",            
+    path: "music/aot-thanks.opus",              
+    image: "resimler/team.jpg",             
+    spotify_url: "https://youtu.be/hoJ4qxcXz5w",         
   },
 ]
   track_list = value;
