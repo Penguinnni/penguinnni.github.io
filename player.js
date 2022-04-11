@@ -428,7 +428,7 @@ function getTracks2() {
     name: "Guilty Hero",                
     artist: "Kohta Yamamoto",            
     path: "music/aotGH.m4a",              
-    image: "resimler/yelena.gif",             
+    image: "resimler/yelena.webp",             
     spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",         
   },] 
   track_list = value;
@@ -452,7 +452,7 @@ function getTracks3() {
     name: "The Rumbling",           
     artist: "S İ M",             
     path: "music/Rumbling.mp3",                
-    image: "resimler/aot2.gif",              
+    image: "resimler/aot2.webp",              
     spotify_url: "https://youtu.be/KHCIO7a3jSI",    
   },{
     name: "Boku no Sensou",           
@@ -463,14 +463,20 @@ function getTracks3() {
   },{
     name: "Shingeki no Kyojin Violin",                
     artist: "Hiroyuki Sawano",            
-    path: "music/aot.mp3",              
+    path: "music/aot-part1.opus",              
     image: "resimler/petra.gif",             
     spotify_url: "https://youtu.be/nAV_zyhC4EE",         
   },{
-    name: "Shingeki no Kyojin Piano",           
+    name: "Shingeki no Kyojin Piano",                
+    artist: "Hiroyuki Sawano",            
+    path: "music/aot-part2.opus",              
+    image: "resimler/aot-eren2.webp",             
+    spotify_url: "https://youtu.be/nAV_zyhC4EE",         
+  },{
+    name: "Shingeki no Kyojin Piano 2",           
     artist: "Hiroyuki Sawano",             
     path: "music/aotPiano.mp3",                
-    image: "resimler/aotK.gif",              
+    image: "resimler/aotK.webp",              
     spotify_url: "https://youtu.be/IPWiiR5MVv4",    
   },{
     name: "Shingeki no Kyojin Major",           
@@ -488,7 +494,7 @@ function getTracks3() {
     name: "Guilty Hero",                
     artist: "Kohta Yamamoto",            
     path: "music/aotGHO.m4a",              
-    image: "resimler/yelena.gif",             
+    image: "resimler/yelena.webp",             
     spotify_url: "https://youtu.be/-q41OJu9fXM",         
   },{
     name: "Eye Water",                
@@ -518,13 +524,13 @@ function getTracks3() {
     name: "AttackD",                
     artist: "Hiroyuki Sawano",            
     path: "music/attackd.opus",              
-    image: "resimler/eren.gif",             
+    image: "resimler/aot-eren.gif",             
     spotify_url: "https://youtu.be/c7NMfDeIMHs",         
   },{
     name: "ThanksAT",                
     artist: "Hiroyuki Sawano",            
     path: "music/aot-thanks.opus",              
-    image: "resimler/team.jpg",             
+    image: "resimler/eren.gif",             
     spotify_url: "https://youtu.be/hoJ4qxcXz5w",         
   },
 ]
