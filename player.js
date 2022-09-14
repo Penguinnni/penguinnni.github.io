@@ -86,14 +86,6 @@ function fillTheMusicList(trackL,playlistName) {
   tracklist_right.innerHTML=str;
 }
 
-function fillTheMusicList(trackL,playlistName) {
-  var str="<div class=\"playlist\"><b><marquee>"+playlistName+"</marquee></b></div>";
-  trackL.map((item,index)=>{
-    str = str+"<div><div class=\"listeler\" onclick=\"playMusic("+index+")\" >"+item.name+"</div><br><hr><br></div>";
-  })
-  tracklist_right.innerHTML=str;
-}
-
 function playMusic(track_indexx) {
   track_index=track_indexx;
   loadTrack(track_index)
@@ -111,7 +103,26 @@ function loadTrack(track_index) {
   track_artist.textContent = track_list[track_index].artist;
   now_playing.textContent = "PLAYING " + (track_index + 1) + " OF " + track_list.length;
 
+  // Ben Yaptım 
+  if(track_list[track_index].name.length > 45){
+    track_name.style=" text-align:center; white-space: nowrap; width: 30vw; overflow: hidden; text-overflow: ellipsis; height: 2.5vw; padding-left: 5%; "    
+  }
+  else{
+    track_name.style=" "
+    track_name.textContent = track_list[track_index].name;
+  }
+  if(track_list[track_index].artist.length > 100){
+    track_artist.style=" text-align:center; white-space: nowrap; width: 30vw; overflow: hidden; height: 1.6vw; text-overflow: clip;"
+    var tA= "<marquee>"+ track_list[track_index].artist + "</marquee>";
+    track_artist.innerHTML=tA;
+  }
+  else{
+    track_artist.style=" "
+    track_artist.textContent = track_list[track_index].artist;
+  }
+
   updateTimer = setInterval(seekUpdate, 1000);
+
   curr_track.addEventListener("ended", nextTrack);
 }
 
@@ -281,10 +292,10 @@ async function GetBearerToken() {
 function getTracks2() {
   playlist_img.style.backgroundImage = "url('resimler/nightCity.jpg')";
   var value = [{
-    name: "Daddy Issues",                // Albüm ismi
+    name: "Daddy Issues",                // Müzik ismi
     artist: "The Neighbourhood",              // Sanatçı ismi
-    path: "music/Daddy Issues.mp3",                // Müziğin mp3 Konumu
-    image: "resimler/sun.webp",               // Albüm resmi
+    path: "music/Daddy Issues.mp3",                // Müziğin Konumu
+    image: "resimler/sun.webp",               // Müziğin resmi
     spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",         // Müziğin url'i
   },{
     name: "Heat Waves",               
