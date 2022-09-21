@@ -22,7 +22,7 @@
   background-image: url("resimler/loading.gif");
   background-size: cover;
   border-radius: 15%;
-
+  cursor: pointer;
 }
 
 .now-playing {

@@ -104,10 +104,24 @@ function playMusic(track_indexx) {
     document.getElementById(track_index).style ="color:red;"
 }
 
-function tikla(){
-  var eTop = $(track_index).offset().top;
-  log(eTop - $(window).scrollTop());
-  document.querySelector(".listelerR").scroll(track_index.top);
+function tikla(x){
+  if(track_index <7){
+    x=0;
+    console.log("if");
+    const scrollElement = document.querySelector(".right");
+
+    var konum=document.getElementById(x).getBoundingClientRect();
+    
+    scrollElement.scrollBy(konum);
+    scrollElement.scrollBy(0,-1000);
+  }
+  else{
+    x=track_index-7;
+    console.log("else");
+    const scrollElement = document.querySelector(".right");
+    var konum=document.getElementById(x).getBoundingClientRect();
+    scrollElement.scrollBy(konum);
+  }
 }
 
 function loadTrack(track_index) {
