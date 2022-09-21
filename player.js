@@ -108,19 +108,17 @@ function tikla(x){
   if(track_index <7){
     x=0;
     console.log("if");
-    const scrollElement = document.querySelector(".right");
 
     var konum=document.getElementById(x).getBoundingClientRect();
     
-    scrollElement.scrollBy(konum);
-    scrollElement.scrollBy(0,-1000);
+    tracklist_right.scrollBy(konum);
+    tracklist_right.scrollBy(0,-1000);
   }
   else{
     x=track_index-7;
     console.log("else");
-    const scrollElement = document.querySelector(".right");
     var konum=document.getElementById(x).getBoundingClientRect();
-    scrollElement.scrollBy(konum);
+    tracklist_right.scrollBy(konum);
   }
 }
 
@@ -500,6 +498,7 @@ function getTracks2() {
   fillTheMusicList(value,"S L O W E D + R E V E R B")
   localStorage.setItem("lastPlaylist",JSON.stringify({playlistName:"S L O W E D + R E V E R B",playlistId:"slow"}));
   pauseTrack();
+  tracklist_right.scrollBy(0,-900000);
 }
 function getTracks3() {
   playlist_img.style.backgroundImage = "url('resimler/aot.jpg')";
@@ -607,6 +606,7 @@ function getTracks3() {
   fillTheMusicList(value,"Attack On Titan")
   localStorage.setItem("lastPlaylist",JSON.stringify({playlistName:"Attack On Titan",playlistId:"aot"}));
   pauseTrack();
+  tracklist_right.scrollBy(0,-900000);
 }
 async function getTracks(playlist_id) {
   var spotifytracks = [];
@@ -616,6 +616,7 @@ async function getTracks(playlist_id) {
     p.style.color = "rgba(255, 255, 255, 0.63)";
     })
     document.getElementById(playlist_id).style ="color:red;"
+    tracklist_right.scrollBy(0,-900000);
   let options = {
     headers: {
       Accept: "application/json",
