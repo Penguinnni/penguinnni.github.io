@@ -1,18 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
   <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
- <script src="https://www.openjs.com/scripts/events/keyboard_shortcuts/shortcut.js" type="text/javascript"></script>
-      <script language="JavaScript">   
-        shortcut.add("l", function() {nextTrack()});
-        shortcut.add("alt+l", function() {nextTrack()});
-        shortcut.add("j", function() {prevTrack()});
-        shortcut.add("alt+j", function() {prevTrack()});
-        shortcut.add("k", function() {playpauseTrack()});
-        shortcut.add("space", function() {playpauseTrack()});
-</script>
     <link rel="shortcut icon" href="https://penguinnni.com/resimler/logo.png" type="image/x-icon" >
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="./css/uicons-regular-rounded.css">
@@ -81,7 +72,7 @@
     .login{
         font-size: 1.3vw;
         margin-right: 2%;  
-        width: 12vw; 
+        width: 13vw; 
     }
     .login button{
         margin-left: 5%;
@@ -161,23 +152,31 @@
 .icon-buyuk{
     font-size: 3vw;
 }
-    #style-4::-webkit-scrollbar
+    .right::-webkit-scrollbar
     {
         width: 0.2vw;
     }
-    #style-4::-webkit-scrollbar-thumb
+    .right::-webkit-scrollbar-thumb
+    {
+        background-color: white;
+    }
+    .left::-webkit-scrollbar
+    {
+        width: 0.2vw;
+    }
+    .left::-webkit-scrollbar-thumb
     {
         background-color: white;
     }
 
     .left hr{
         width: 11vw;
-        margin-left: 20px; 
-        border-color: #30353a;
+        margin-left: 7%; 
+        border-color: #30353a;  
     }
     .right hr{
         width: 13vw;
-        margin-left: 20px; 
+        margin-left: 7%;  
         border-color: #30353a;
     }
     .listeler{
@@ -194,6 +193,22 @@
         cursor: pointer;
     }
     .listeler:hover{
+        color: white;
+    }
+    .listelerR{
+        transition: all 0.2s ease-in;
+        -moz-transition: all 0.2s ease-in;
+        -webkit-transition: all 0.2s ease-in;
+        -ms-transition: all 0.1s ease-in;
+        color: rgba(255, 255, 255, 0.63); 
+        text-align: center;
+        align-items: center;
+        display:flex;
+        justify-content: center;
+        font-size: 1.2em;
+        cursor: pointer;
+    }
+    .listeleR:hover{
         color: white;
     }
     .playlist{
@@ -280,45 +295,45 @@
         </div>
     <div class="uc">
         <div class="leftAna">
-            <div class="left" id="style-4">    
+            <div class="left">    
                 <div class="playlist"><b>Çalma Listelerin</b></div>
-                <div class="listeler" onclick="getTracks2()">S L O W E D + R E V E R B</div><br>
+                <div class="listeler" onclick="getTracks2()" id="slow">S L O W E D + R E V E R B</div><br>
                 <hr><br>
-                <div class="listeler" onclick="getTracks3()">Attack On Titan</div><br>
+                <div class="listeler" onclick="getTracks3()" id="aot">Attack On Titan</div><br>
                 <hr><br>
-                <div class="listeler" onclick="getTracksByPlaylistId('3kDDfWHTMOh7jMl6hWeEhp','Altai Turkic Traditional')"  id="girtlak">Altai Turkic Traditional</div><br>
+                <div class="listeler" onclick="getTracksByPlaylistId('3kDDfWHTMOh7jMl6hWeEhp','Altai Turkic Traditional')"  id="3kDDfWHTMOh7jMl6hWeEhp">Altai Turkic Traditional</div><br>
                 <hr><br>
-                <div class="listeler" onclick="getTracksByPlaylistId('1ESRG72XXQUDLCeqaSCoGo','Yabancı Şarkılar')"  id="yabanci">Yabancı Şarkılar</div><br>
+                <div class="listeler" onclick="getTracksByPlaylistId('1ESRG72XXQUDLCeqaSCoGo','Yabancı Şarkılar')"  id="1ESRG72XXQUDLCeqaSCoGo">Yabancı Şarkılar</div><br>
                 <hr><br>
-                <div class="listeler" onclick="getTracksByPlaylistId('3P4jad5GrwyWaNKh9GB3bE','Türkçe Şarkılar')" id="Turkce">Türkçe Şarkılar</div><br>
+                <div class="listeler" onclick="getTracksByPlaylistId('3P4jad5GrwyWaNKh9GB3bE','Türkçe Şarkılar')" id="3P4jad5GrwyWaNKh9GB3bE">Türkçe Şarkılar</div><br>
                 <hr><br>
-                <div class="listeler" onclick="getTracksByPlaylistId('7M2KMprNurcSVb35h2Er2F','LC Waikiki Müzikleri')" id="LC">LC Waikiki Müzikleri</div><br>
+                <div class="listeler" onclick="getTracksByPlaylistId('7M2KMprNurcSVb35h2Er2F','LC Waikiki Müzikleri')" id="7M2KMprNurcSVb35h2Er2F">LC Waikiki Müzikleri</div><br>
                 <hr><br>
-                <div class="listeler" onclick="getTracksByPlaylistId('7wmAWbQURZa1jwYQkJEduj','Winx Club')" id="Winx">Winx Club</div><br>
+                <div class="listeler" onclick="getTracksByPlaylistId('7wmAWbQURZa1jwYQkJEduj','Winx Club')" id="7wmAWbQURZa1jwYQkJEduj">Winx Club</div><br>
                 <hr><br>
-                <div class="listeler" onclick="getTracksByPlaylistId('7v0k2Enal18taY4ICUkXqc','Hüseyin Aktepenin Takla Atarken Dinlediği Şarkılar')" id="huso">Hüseyin Aktepenin Takla Atarken Dinlediği Şarkılar</div><br>
+                <div class="listeler" onclick="getTracksByPlaylistId('7v0k2Enal18taY4ICUkXqc','Hüseyin Aktepenin Takla Atarken Dinlediği Şarkılar')" id="7v0k2Enal18taY4ICUkXqc">Hüseyin Aktepenin Takla Atarken Dinlediği Şarkılar</div><br>
                 <hr><br>
-                <div class="listeler" onclick="getTracksByPlaylistId('1pw9A9tfChGgB75JUixlG1','A101’de kasiyer olacağım aklıma gelince dinlediğim şarkılar')" id="a101">A101’de kasiyer olacağım aklıma gelince dinlediğim şarkılar</div><br>
+                <div class="listeler" onclick="getTracksByPlaylistId('1pw9A9tfChGgB75JUixlG1','A101’de kasiyer olacağım aklıma gelince dinlediğim şarkılar')" id="1pw9A9tfChGgB75JUixlG1">A101’de kasiyer olacağım aklıma gelince dinlediğim şarkılar</div><br>
                 <hr><br>
-                <div class="listeler" onclick="getTracksByPlaylistId('5MtVKGW6N8igrVePnAiNCF','Kangaldan kaçarken dinlenecek müzikler')" id="kangal">Kangaldan kaçarken dinlenecek müzikler</div><br>
+                <div class="listeler" onclick="getTracksByPlaylistId('5MtVKGW6N8igrVePnAiNCF','Kangaldan kaçarken dinlenecek müzikler')" id="5MtVKGW6N8igrVePnAiNCF">Kangaldan kaçarken dinlenecek müzikler</div><br>
                 <hr><br>
-                <div class="listeler" onclick="getTracksByPlaylistId('3XEdXscYeFKsrhHBBuS0vl','Arc Star yedikten sonra etkisinin bitmesini beklerken dinlemelik liste')" id="arc">Arc Star yedikten sonra etkisinin bitmesini beklerken dinlemelik liste</div><br>
+                <div class="listeler" onclick="getTracksByPlaylistId('3XEdXscYeFKsrhHBBuS0vl','Arc Star yedikten sonra etkisinin bitmesini beklerken dinlemelik liste')" id="3XEdXscYeFKsrhHBBuS0vl">Arc Star yedikten sonra etkisinin bitmesini beklerken dinlemelik liste</div><br>
                 <hr><br>
-                <div class="listeler" onclick="getTracksByPlaylistId('1r03cctB185NtCQiUQHGZM','Yıldız Sanayi önü polisten kaçarken dinlemelik liste')" id="sanayi">Yıldız Sanayi önü polisten kaçarken dinlemelik liste</div><br>
+                <div class="listeler" onclick="getTracksByPlaylistId('1r03cctB185NtCQiUQHGZM','Yıldız Sanayi önü polisten kaçarken dinlemelik liste')" id="1r03cctB185NtCQiUQHGZM">Yıldız Sanayi önü polisten kaçarken dinlemelik liste</div><br>
                 <hr><br>
-                <div class="listeler" onclick="getTracksByPlaylistId('6FbhGaCateFNDi5I6ujfnu','Kamyon çarpınca yerde 2 büklüm ambulans beklerken dinlemelik liste')" id="kamyon">Kamyon çarpınca yerde 2 büklüm ambulans beklerken dinlemelik liste</div><br>
+                <div class="listeler" onclick="getTracksByPlaylistId('6FbhGaCateFNDi5I6ujfnu','Kamyon çarpınca yerde 2 büklüm ambulans beklerken dinlemelik liste')" id="6FbhGaCateFNDi5I6ujfnu">Kamyon çarpınca yerde 2 büklüm ambulans beklerken dinlemelik liste</div><br>
                 <hr><br>
-                <div class="listeler" onclick="getTracksByPlaylistId('6s1RfV9g4NvWzeir2fwVDx','Kaybolmuşlar Listesi')" id="kayip">Kaybolmuşlar Listesi</div><br>
+                <div class="listeler" onclick="getTracksByPlaylistId('6s1RfV9g4NvWzeir2fwVDx','Kaybolmuşlar Listesi')" id="6s1RfV9g4NvWzeir2fwVDx">Kaybolmuşlar Listesi</div><br>
                 <hr><br>
-                <div class="listeler" onclick="getTracksByPlaylistId('1DlqdzJkRPz7Ilc9FmjZV1','Receb İvedik Mental Çöküş')" id="Receb-ivedik">Receb İvedik Mental Çöküş</div><br>
+                <div class="listeler" onclick="getTracksByPlaylistId('1DlqdzJkRPz7Ilc9FmjZV1','Receb İvedik Mental Çöküş')" id="1DlqdzJkRPz7Ilc9FmjZV1">Receb İvedik Mental Çöküş</div><br>
                 <hr><br>
-                <div class="listeler" onclick="getTracksByPlaylistId('4ZgKPCpbj5w5gsVBMeliun','Receb İvedikin DJ şarkıları')" id="Receb-ivedik2">Receb İvedik'in DJ şarkıları</div><br>
+                <div class="listeler" onclick="getTracksByPlaylistId('4ZgKPCpbj5w5gsVBMeliun','Receb İvedikin DJ şarkıları')" id="4ZgKPCpbj5w5gsVBMeliun">Receb İvedik'in DJ şarkıları</div><br>
                 <hr><br>
-                <div class="listeler" onclick="getTracksByPlaylistId('4qA2QdJYQ82N9JP3Me8rdn','İsmet İnönünün Lozanı imzalarken dinlediği müzikler')" id="lozan">İsmet İnönünün Lozanı imzalarken dinlediği müzikler</div><br>
+                <div class="listeler" onclick="getTracksByPlaylistId('4qA2QdJYQ82N9JP3Me8rdn','İsmet İnönünün Lozanı imzalarken dinlediği müzikler')" id="4qA2QdJYQ82N9JP3Me8rdn">İsmet İnönünün Lozanı imzalarken dinlediği müzikler</div><br>
                 <hr><br>
-                <div class="listeler" onclick="getTracksByPlaylistId('5P8F3p83CfG1F1Os3xjYIm','Sınav notlarımı öğrenen aileme deli taklidi yaparken dinlediğim şarkılar')" id="not">Sınav notlarımı öğrenen aileme deli taklidi yaparken dinlediğim şarkılar</div><br>
+                <div class="listeler" onclick="getTracksByPlaylistId('5P8F3p83CfG1F1Os3xjYIm','Sınav notlarımı öğrenen aileme deli taklidi yaparken dinlediğim şarkılar')" id="5P8F3p83CfG1F1Os3xjYIm">Sınav notlarımı öğrenen aileme deli taklidi yaparken dinlediğim şarkılar</div><br>
                 <hr><br>
-                <div class="listeler" onclick="getTracksByPlaylistId('3quSIRs3wrccww0v3N24Nj','Hitlerin Fransa düşerken dinlediği müzikler')" id="kamyon">Hitlerin Fransa düşerken dinlediği müzikler</div><br>
+                <div class="listeler" onclick="getTracksByPlaylistId('3quSIRs3wrccww0v3N24Nj','Hitlerin Fransa düşerken dinlediği müzikler')" id="3quSIRs3wrccww0v3N24Nj">Hitlerin Fransa düşerken dinlediği müzikler</div><br>
                 <hr><br>
             </div>  
             <div class="playlist-img"></div>
@@ -326,7 +341,7 @@
             <div class="player" onload="onloadd()">
                 <div class="details">
                   <div class="now-playing">PLAYING 0 OF 0</div>
-                  <div class="track-art"></div>
+                  <div class="track-art" onclick="tikla()"></div>
                   <div class="track-name" onmousemove="hareket()" >Şarkı İsmi</div>
                   <div class="track-artist">Sanatçı</div>
                 </div>
@@ -348,11 +363,21 @@
                   <i class="fa fa-volume-up"></i>
                 </div>
             </div>
-         <div class="right" id="style-4">    
+         <div class="right" id="right">    
       </div> 
     </div>
 </div>
-</body>
 <script src="player.js"></script>
+<script src="https://www.openjs.com/scripts/events/keyboard_shortcuts/shortcut.js" type="text/javascript"></script>
+<script language="JavaScript">   
+  shortcut.add("l", function() {nextTrack()});
+  shortcut.add("alt+l", function() {nextTrack()});
+  shortcut.add("j", function() {prevTrack()});
+  shortcut.add("alt+j", function() {prevTrack()});
+  shortcut.add("k", function() {playpauseTrack()});
+  shortcut.add("space", function() {playpauseTrack()});
+</script>
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+</body>
 </html>
