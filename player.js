@@ -59,6 +59,7 @@ if(typeof lastPlaylist === 'object'){
 }
 
 function getTracksByPlaylistId(id,playlistName){
+
   getTracks(id).then(value => {
     track_list = value;
     FillRandomTrackList(value);
@@ -80,9 +81,16 @@ function FillRandomTrackList(trackl) {
 
 function fillTheMusicList(trackL,playlistName) {
   var str="<div class=\"playlist\"><b><marquee>"+playlistName+"</marquee></b></div>";
+  
   trackL.map((item,index)=>{
-    str = str+"<div><div class=\"listeler\" onclick=\"playMusic("+index+")\" >"+item.name+"</div><br><hr><br></div>";
+    if(index==0){
+      str = str+"<div><div id="+index+" style='color:red;' class=\"listelerR\" onclick=\"playMusic("+index+")\" >"+item.name+"</div><br><hr><br></div>";
+    }
+    else
+    str = str+"<div><div id="+index+" class=\"listelerR\" onclick=\"playMusic("+index+")\" >"+item.name+"</div><br><hr><br></div>";
+
   })
+
   tracklist_right.innerHTML=str;
 }
 
@@ -90,6 +98,16 @@ function playMusic(track_indexx) {
   track_index=track_indexx;
   loadTrack(track_index)
   playTrack();
+  document.querySelectorAll(".listelerR").forEach(p => {
+    p.style.color = "rgba(255, 255, 255, 0.63)";
+    })
+    document.getElementById(track_index).style ="color:red;"
+}
+
+function tikla(){
+  var eTop = $(track_index).offset().top;
+  log(eTop - $(window).scrollTop());
+  document.querySelector(".listelerR").scroll(track_index.top);
 }
 
 function loadTrack(track_index) {
@@ -104,7 +122,7 @@ function loadTrack(track_index) {
   now_playing.textContent = "PLAYING " + (track_index + 1) + " OF " + track_list.length;
 
   // Ben Yaptım 
-  if(track_list[track_index].name.length > 45){
+  if(track_list[track_index].name.length > 43){
     track_name.style=" text-align:center; white-space: nowrap; width: 30vw; overflow: hidden; text-overflow: ellipsis; height: 2.5vw; padding-left: 5%; "    
   }
   else{
@@ -197,28 +215,42 @@ function nextTrack() {
     }
     track_index=i;
     loadTrack(i);
+    document.querySelectorAll(".listelerR").forEach(p => {
+      p.style.color = "rgba(255, 255, 255, 0.63)";
+      })
+      document.getElementById(i).style ="color:red;"
   }
   else{
-    if (track_index < track_list.length - 1)
+    if (track_index < track_list.length - 1){
       track_index += 1;
-    else track_index = 0;
-    loadTrack(track_index);
+    }
+    else track_index = 0;{
+      loadTrack(track_index);
+    }
+    document.querySelectorAll(".listelerR").forEach(p => {
+      p.style.color = "rgba(255, 255, 255, 0.63)";
+      })
+      document.getElementById(track_index).style ="color:red;"
   }
+
   playTrack();
 }
 
 function prevTrack() {
-  console.log("yazı",curr_track.currentTime);
    if(curr_track.currentTime > 5 ){
     seek_slider.value = 0;
-    
   }
   else if (track_index > 0){
     track_index -= 1;
+    document.querySelectorAll(".listelerR").forEach(p => {
+      p.style.color = "rgba(255, 255, 255, 0.63)";
+      })
+      document.getElementById(track_index).style ="color:red;" 
   }
   else track_index = track_list.length;
   loadTrack(track_index);
   playTrack();
+ 
 }
 
 function seekTo() {
@@ -444,9 +476,13 @@ function getTracks2() {
   },] 
   track_list = value;
   FillRandomTrackList(value);
+  document.querySelectorAll(".listeler").forEach(p => {
+    p.style.color = "rgba(255, 255, 255, 0.63)";
+    })
+  document.getElementById("slow").style ="color:red;"
   curr_track.volume = volume_slider.value / 100; 
   track_index = 0;
-  loadTrack(track_index);
+  loadTrack(track_index)
   fillTheMusicList(value,"S L O W E D + R E V E R B")
   localStorage.setItem("lastPlaylist",JSON.stringify({playlistName:"S L O W E D + R E V E R B",playlistId:"slow"}));
   pauseTrack();
@@ -461,7 +497,7 @@ function getTracks3() {
     spotify_url: "https://youtu.be/8OkpRK2_gVs",         
   },{
     name: "The Rumbling",           
-    artist: "S İ M",             
+    artist: "S I M",             
     path: "music/Rumbling.mp3",                
     image: "resimler/aot2.webp",              
     spotify_url: "https://youtu.be/KHCIO7a3jSI",    
@@ -549,6 +585,10 @@ function getTracks3() {
   FillRandomTrackList(value);
   curr_track.volume = volume_slider.value / 100; 
   track_index = 0;
+  document.querySelectorAll(".listeler").forEach(p => {
+    p.style.color = "rgba(255, 255, 255, 0.63)";
+    })
+  document.getElementById("aot").style ="color:red;"
   loadTrack(track_index);
   fillTheMusicList(value,"Attack On Titan")
   localStorage.setItem("lastPlaylist",JSON.stringify({playlistName:"Attack On Titan",playlistId:"aot"}));
@@ -558,6 +598,10 @@ async function getTracks(playlist_id) {
   var spotifytracks = [];
   let apiurl = "https://api.spotify.com/v1/playlists/" + playlist_id + "/tracks?market=TR&fields=items(track(album(images)%2Cartists(name)%2Cname%2Cexternal_urls(spotify)%2Cpreview_url%2Chref))%2Cnext"
   let playlistimage_apiurl = "https://api.spotify.com/v1/playlists/"+playlist_id+"?market=TR&fields=images"
+  document.querySelectorAll(".listeler").forEach(p => {
+    p.style.color = "rgba(255, 255, 255, 0.63)";
+    })
+    document.getElementById(playlist_id).style ="color:red;"
   let options = {
     headers: {
       Accept: "application/json",
@@ -593,6 +637,7 @@ async function getTracks(playlist_id) {
           path: item.track.preview_url,
           image: item.track.album.images[0].url,
           spotify_url: item.track.external_urls.spotify,
+          
         }
         spotifytracks.push(track)
       }
@@ -605,7 +650,9 @@ async function getTracks(playlist_id) {
     }
   }
   playlist_img.style.backgroundImage = "url(" +m.images[0].url+ ")";
+  
   return spotifytracks;
+
 }
 function arrayRemoveItemByValue(arr, value) { 
     
