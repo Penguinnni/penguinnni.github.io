@@ -485,6 +485,12 @@ function getTracks2() {
     path: "music/aotGH.m4a",              
     image: "resimler/yelena.webp",             
     spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",         
+  },{
+    name: "The Perfect Girl",                
+    artist: "Mareux",            
+    path: "music/ThePerfectGirl.m4a",              
+    image: "resimler/ThePerfectGirl.webp",             
+    spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",         
   },] 
   track_list = value;
   FillRandomTrackList(value);
