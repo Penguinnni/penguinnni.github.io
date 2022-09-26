@@ -16,9 +16,12 @@ let volume_slider = document.querySelector(".volume_slider");
 let curr_time = document.querySelector(".current-time");
 let total_duration = document.querySelector(".total-duration");
 
+let loadTrackk = JSON.parse(localStorage.getItem("loadTrackk"));
+
 let track_index = 0;
 let isPlaying = false;
 let updateTimer;
+let first = false;
 
 // Create new audio element
 let curr_track = document.createElement('audio');
@@ -46,15 +49,21 @@ console.log(lastPlaylist)
 if(typeof lastPlaylist === 'object'){
  
   switch(lastPlaylist.playlistId) {
-    case "slow":
+    case "slow":{
       getTracks2();
-      break;
-    case "aot":
-      getTracks3();
-      break;
+      track_index=0;
+      break;}
 
-    default:
+    case "aot":{
+      getTracks3();
+      track_index=0;
+      break;}
+
+
+    default:{      
       getTracksByPlaylistId(lastPlaylist.playlistId,lastPlaylist.playlistName);
+      track_index=0;
+    }
   }
 }
 
@@ -65,9 +74,17 @@ function getTracksByPlaylistId(id,playlistName){
     FillRandomTrackList(value);
     curr_track.volume = volume_slider.value / 100;
     track_index = 0;
+    if(typeof loadTrackk === 'object' && first == false){
+      track_index=(loadTrackk.ix);
+      first = true;
+    }
+    else{
+      track_index = 0;
+    }
     loadTrack(track_index);
     fillTheMusicList(value,playlistName)
-    localStorage.setItem("lastPlaylist",JSON.stringify({playlistName:playlistName,playlistId:id}));
+    renk();
+    localStorage.setItem("lastPlaylist",JSON.stringify({playlistName:playlistName,playlistId:id,PlaylistValue:track_index}));
   });
   pauseTrack();
 }
@@ -83,44 +100,39 @@ function fillTheMusicList(trackL,playlistName) {
   var str="<div class=\"playlist\"><b><marquee>"+playlistName+"</marquee></b></div>";
   
   trackL.map((item,index)=>{
-    if(index==0){
-      str = str+"<div><div id="+index+" style='color:red;' class=\"listelerR\" onclick=\"playMusic("+index+")\" >"+item.name+"</div><br><hr><br></div>";
-    }
-    else
     str = str+"<div><div id="+index+" class=\"listelerR\" onclick=\"playMusic("+index+")\" >"+item.name+"</div><br><hr><br></div>";
 
   })
 
   tracklist_right.innerHTML=str;
 }
-
+function renk(){
+  document.querySelectorAll(".listelerR").forEach(p => {
+    p.style.color = "rgba(255, 255, 255, 0.63)";
+    })
+  document.getElementById(track_index).style ="color:red;"
+}
 function playMusic(track_indexx) {
   track_index=track_indexx;
   loadTrack(track_index)
   playTrack();
-  document.querySelectorAll(".listelerR").forEach(p => {
-    p.style.color = "rgba(255, 255, 255, 0.63)";
-    })
-    document.getElementById(track_index).style ="color:red;"
+  renk();
 }
 
 function tikla(x){
   if(track_index <7){
     x=0;
-    console.log("if");
-
     var konum=document.getElementById(x).getBoundingClientRect();
-    
     tracklist_right.scrollBy(konum);
     tracklist_right.scrollBy(0,-1000);
   }
   else{
     x=track_index-7;
-    console.log("else");
     var konum=document.getElementById(x).getBoundingClientRect();
     tracklist_right.scrollBy(konum);
   }
 }
+
 
 function loadTrack(track_index) {
   clearInterval(updateTimer);
@@ -133,7 +145,6 @@ function loadTrack(track_index) {
   track_artist.textContent = track_list[track_index].artist;
   now_playing.textContent = "PLAYING " + (track_index + 1) + " OF " + track_list.length;
 
-  // Ben Yaptım 
   if(track_list[track_index].name.length > 43){
     track_name.style=" text-align:center; white-space: nowrap; width: 30vw; overflow: hidden; text-overflow: ellipsis; height: 2.5vw; padding-left: 5%; "    
   }
@@ -152,8 +163,8 @@ function loadTrack(track_index) {
   }
 
   updateTimer = setInterval(seekUpdate, 1000);
-
   curr_track.addEventListener("ended", nextTrack);
+  localStorage.setItem("loadTrackk",JSON.stringify({ix:track_index}));
 }
 
 var random_TrackList=[]
@@ -227,10 +238,7 @@ function nextTrack() {
     }
     track_index=i;
     loadTrack(i);
-    document.querySelectorAll(".listelerR").forEach(p => {
-      p.style.color = "rgba(255, 255, 255, 0.63)";
-      })
-      document.getElementById(i).style ="color:red;"
+    renk();
   }
   else{
     if (track_index < track_list.length - 1){
@@ -239,10 +247,7 @@ function nextTrack() {
     else track_index = 0;{
       loadTrack(track_index);
     }
-    document.querySelectorAll(".listelerR").forEach(p => {
-      p.style.color = "rgba(255, 255, 255, 0.63)";
-      })
-      document.getElementById(track_index).style ="color:red;"
+    renk();
   }
 
   playTrack();
@@ -254,10 +259,7 @@ function prevTrack() {
   }
   else if (track_index > 0){
     track_index -= 1;
-    document.querySelectorAll(".listelerR").forEach(p => {
-      p.style.color = "rgba(255, 255, 255, 0.63)";
-      })
-      document.getElementById(track_index).style ="color:red;" 
+    renk();
   }
   else track_index = track_list.length;
   loadTrack(track_index);
@@ -493,12 +495,19 @@ function getTracks2() {
     })
   document.getElementById("slow").style ="color:red;"
   curr_track.volume = volume_slider.value / 100; 
-  track_index = 0;
-  loadTrack(track_index)
+  if(typeof loadTrackk === 'object' && first == false){
+    track_index=(loadTrackk.ix);
+    first = true;
+  }
+  else{
+    track_index = 0;
+  }
+  loadTrack(track_index);
   fillTheMusicList(value,"S L O W E D + R E V E R B")
   localStorage.setItem("lastPlaylist",JSON.stringify({playlistName:"S L O W E D + R E V E R B",playlistId:"slow"}));
   pauseTrack();
   tracklist_right.scrollBy(0,-900000);
+  renk();
 }
 function getTracks3() {
   playlist_img.style.backgroundImage = "url('resimler/aot.jpg')";
@@ -597,16 +606,23 @@ function getTracks3() {
   track_list = value;
   FillRandomTrackList(value);
   curr_track.volume = volume_slider.value / 100; 
-  track_index = 0;
   document.querySelectorAll(".listeler").forEach(p => {
     p.style.color = "rgba(255, 255, 255, 0.63)";
     })
   document.getElementById("aot").style ="color:red;"
+  if(typeof loadTrackk === 'object' && first == false){
+    track_index=(loadTrackk.ix);
+    first = true;
+  }
+  else{
+    track_index = 0;
+  }
   loadTrack(track_index);
   fillTheMusicList(value,"Attack On Titan")
-  localStorage.setItem("lastPlaylist",JSON.stringify({playlistName:"Attack On Titan",playlistId:"aot"}));
+  localStorage.setItem("lastPlaylist",JSON.stringify({playlistName:"Attack On Titan",playlistId:"aot",PlaylistValue:track_index}));
   pauseTrack();
   tracklist_right.scrollBy(0,-900000);
+  renk();
 }
 async function getTracks(playlist_id) {
   var spotifytracks = [];
