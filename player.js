@@ -51,43 +51,19 @@ if(typeof lastPlaylist === 'object'){
   switch(lastPlaylist.playlistId) {
     case "slow":{
       getTracks2();
-      track_index=0;
       break;}
 
     case "aot":{
       getTracks3();
-      track_index=0;
       break;}
 
 
     default:{      
       getTracksByPlaylistId(lastPlaylist.playlistId,lastPlaylist.playlistName);
-      track_index=0;
     }
   }
 }
 
-function getTracksByPlaylistId(id,playlistName){
-
-  getTracks(id).then(value => {
-    track_list = value;
-    FillRandomTrackList(value);
-    curr_track.volume = volume_slider.value / 100;
-    track_index = 0;
-    if(typeof loadTrackk === 'object' && first == false){
-      track_index=(loadTrackk.ix);
-      first = true;
-    }
-    else{
-      track_index = 0;
-    }
-    loadTrack(track_index);
-    fillTheMusicList(value,playlistName)
-    renk();
-    localStorage.setItem("lastPlaylist",JSON.stringify({playlistName:playlistName,playlistId:id,PlaylistValue:track_index}));
-  });
-  pauseTrack();
-}
 function FillRandomTrackList(trackl) {
   var x=[]
       for (let i = 0; i < trackl.length; i++) {
@@ -335,6 +311,26 @@ async function GetBearerToken() {
     return ls_access_token;
   }
 }
+function getTracksByPlaylistId(id,playlistName){
+
+  getTracks(id).then(value => {
+    track_list = value;
+    FillRandomTrackList(value);
+    curr_track.volume = volume_slider.value / 100;
+    if(typeof loadTrackk === 'object' && first == false){
+      track_index=(loadTrackk?.ix);
+      first = true;
+    }
+    else{
+      track_index = 0;
+    }
+    loadTrack(track_index);
+    fillTheMusicList(value,playlistName)
+    renk();
+    localStorage.setItem("lastPlaylist",JSON.stringify({playlistName:playlistName,playlistId:id,PlaylistValue:track_index}));
+  });
+  pauseTrack();
+}
 function getTracks2() {
   playlist_img.style.backgroundImage = "url('resimler/nightCity.jpg')";
   var value = [{
@@ -501,9 +497,11 @@ function getTracks2() {
     })
   document.getElementById("slow").style ="color:red;"
   curr_track.volume = volume_slider.value / 100; 
+  debugger;
   if(typeof loadTrackk === 'object' && first == false){
-    track_index=(loadTrackk.ix);
+    track_index=(loadTrackk?.ix);
     first = true;
+    console.log(track_index);
   }
   else{
     track_index = 0;
@@ -617,7 +615,7 @@ function getTracks3() {
     })
   document.getElementById("aot").style ="color:red;"
   if(typeof loadTrackk === 'object' && first == false){
-    track_index=(loadTrackk.ix);
+    track_index=(loadTrackk?.ix);
     first = true;
   }
   else{
