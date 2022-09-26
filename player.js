@@ -51,13 +51,12 @@ if(typeof lastPlaylist === 'object'){
   switch(lastPlaylist.playlistId) {
     case "slow":{
       getTracks2();
-      break;}
-
+      break;
+    }
     case "aot":{
       getTracks3();
-      break;}
-
-
+      break;
+    }
     default:{      
       getTracksByPlaylistId(lastPlaylist.playlistId,lastPlaylist.playlistName);
     }
