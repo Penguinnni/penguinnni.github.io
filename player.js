@@ -497,7 +497,6 @@ function getTracks2() {
     })
   document.getElementById("slow").style ="color:red;"
   curr_track.volume = volume_slider.value / 100; 
-  debugger;
   if(typeof loadTrackk === 'object' && first == false){
     track_index=(loadTrackk?.ix);
     first = true;
