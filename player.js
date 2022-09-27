@@ -39,11 +39,11 @@ window.addEventListener('load', (event) => {
   ChangeLoopButtonColor();
   let v = localStorage.getItem("volume");
   if (v != undefined) {
-    volume_slider.value = v * 100;
+    volume_slider.value = v * 500;
     curr_track.volume = v;
   }
   else {
-    volume_slider.value = 0.25 * 100;
+    volume_slider.value = 0.25 * 500;
     curr_track.volume = 0.25;
   }
 });
@@ -250,19 +250,18 @@ function nextTrack() {
   }
 
   else if (statusL == "active") {
-    let i = track_index;
-    console.log("index", i);
-    track_index = i;
-    loadTrack(i);
-    renk();
     document.querySelector(".next-track").addEventListener("click", () => {
       statusL = "disable";
       ChangeLoopButtonColor();
       localStorage.setItem("LoopButtonStatus", "disable");
       nextTrack();
-      
     },
     { once: true });
+    let i = track_index;
+    console.log("index", i);
+    track_index = i;
+    loadTrack(i);
+    renk();
   }
   else {
     if (track_index < track_list.length - 1) {
@@ -306,15 +305,15 @@ function prevTrack() {
 }
 
 function seekTo() {
-  let seekto = curr_track.duration * (seek_slider.value / 100);
+  let seekto = curr_track.duration * (seek_slider.value / 5000);
   curr_track.currentTime = seekto;
 }
 
 function setVolume() {
-  curr_track.volume = volume_slider.value / 100;
+  curr_track.volume = volume_slider.value / 500;
 }
 function setVolume2() {
-  curr_track.volume = volume_slider.value / 100;
+  curr_track.volume = volume_slider.value / 500;
   localStorage.setItem("volume", curr_track.volume);
 }
 
@@ -322,7 +321,7 @@ function seekUpdate() {
   let seekPosition = 0;
 
   if (!isNaN(curr_track.duration) && (isPlaying)) {
-    seekPosition = curr_track.currentTime * (100 / curr_track.duration);
+    seekPosition = curr_track.currentTime * (5000 / curr_track.duration);
 
     seek_slider.value = seekPosition;
 
@@ -378,7 +377,7 @@ function getTracksByPlaylistId(id, playlistName) {
   getTracks(id).then(value => {
     track_list = value;
     FillRandomTrackList(value);
-    curr_track.volume = volume_slider.value / 100;
+    curr_track.volume = volume_slider.value / 500;
     if (typeof loadTrackk === 'object' && first == false) {
       track_index = (loadTrackk?.ix);
       first = true;
@@ -540,7 +539,7 @@ function getTracks2() {
     image: "resimler/petra.gif",
     spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",
   }, {
-    name: "Guilty Hero",
+    name: "Guilty Hero Slowed",
     artist: "Kohta Yamamoto",
     path: "music/aotGH.m4a",
     image: "resimler/yelena.webp",
@@ -558,7 +557,7 @@ function getTracks2() {
     p.style.color = "rgba(255, 255, 255, 0.63)";
   })
   document.getElementById("slow").style = "color:red;"
-  curr_track.volume = volume_slider.value / 100;
+  curr_track.volume = volume_slider.value / 500;
   if (typeof loadTrackk === 'object' && first == false) {
     track_index = (loadTrackk?.ix);
     first = true;
@@ -670,7 +669,7 @@ function getTracks3() {
   ]
   track_list = value;
   FillRandomTrackList(value);
-  curr_track.volume = volume_slider.value / 100;
+  curr_track.volume = volume_slider.value / 500;
   document.querySelectorAll(".listeler").forEach(p => {
     p.style.color = "rgba(255, 255, 255, 0.63)";
   })
