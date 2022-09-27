@@ -57,7 +57,7 @@
   transition: all 0.1s ease-in;
 }
 
-.playpause-track:hover, .prev-track:hover, .next-track:hover,{
+.playpause-track:hover, .prev-track:hover, .next-track:hover{
   transition: all 0.2s ease-in;
   color:rgb(192, 0, 0);
 }
