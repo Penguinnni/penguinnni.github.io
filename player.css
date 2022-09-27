@@ -34,6 +34,7 @@
   color: hsl(0, 0%, 51%);
   animation: lights 5s 750ms linear infinite;
   text-align: center;
+  cursor: pointer;
 }
 
 .track-artist {
@@ -48,7 +49,7 @@
   color: rgb(255, 255, 255);
 }
 
-.playpause-track, .prev-track, .next-track , .random-play , .external-link {
+.playpause-track, .prev-track, .next-track , .random-play , .loop-play {
   margin: 1vw;
   opacity: 0.9;
   cursor: pointer;
@@ -56,7 +57,7 @@
   transition: all 0.1s ease-in;
 }
 
-.playpause-track:hover, .prev-track:hover, .next-track:hover, .random-play:hover , .external-link:hover {
+.playpause-track:hover, .prev-track:hover, .next-track:hover,{
   transition: all 0.2s ease-in;
   color:rgb(192, 0, 0);
 }

@@ -9,8 +9,9 @@
     <link rel="stylesheet" href="./css/uicons-regular-rounded.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="player.css">
+    
   <title>Penguinnni</title>
 </head>
 <style>
@@ -343,7 +344,7 @@
                 <div class="details">
                   <div class="now-playing">PLAYING 0 OF 0</div>
                   <div class="track-art" onclick="tikla()"></div>
-                  <div class="track-name" onmousemove="hareket()" >Şarkı İsmi</div>
+                  <div class="track-name" onclick="openLink()">Şarkı İsmi</div>
                   <div class="track-artist">Sanatçı</div>
                 </div>
                 <div class="buttons">
@@ -351,7 +352,7 @@
                   <div class="prev-track" onclick="prevTrack()"><i class="fi fi-rr-angle-double-left icon-ana"></i></div>
                   <div class="playpause-track" onclick="playpauseTrack()"><i class="fi fi-rr-play icon-buyuk"></i></div>
                   <div class="next-track" onclick="nextTrack()"><i class="fi fi-rr-angle-double-right icon-ana"></i></div>
-                  <div class="external-link" onclick="openLink()"><i class="fi fi-rr-redo icon-ana"></i></div>
+                  <div class="loop-play" onclick="loopAktif()"><i class="fa-solid fa-arrows-rotate icon-ana"></i></div>
                 </div>
                 <div class="slider_container">
                   <div class="current-time">00:00</div>
