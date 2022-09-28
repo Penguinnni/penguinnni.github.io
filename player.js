@@ -482,7 +482,7 @@ function getTracks2() {
     name: "Here Lucian Remix",
     artist: "Alessia Cara",
     path: "music/Alessia Cara - Here Lucian Remix.mp3",
-    image: "resimler/plak.gif",
+    image: "resimler/slowed.gif",
     spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",
   }, {
     name: "Space Song",
@@ -518,7 +518,7 @@ function getTracks2() {
     name: "In This Shirt",
     artist: "The Irrepressibles",
     path: "music/imLost.mp3",
-    image: "resimler/crying.gif",
+    image: "resimler/handF.gif",
     spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",
   }, {
     name: "Pop Style",
@@ -536,7 +536,7 @@ function getTracks2() {
     name: "Shingeki no Kyojin Violin",
     artist: "Hiroyuki Sawano",
     path: "music/aot.mp3",
-    image: "resimler/petra.gif",
+    image: "resimler/petra.webp",
     spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",
   }, {
     name: "Guilty Hero Slowed",
@@ -597,7 +597,7 @@ function getTracks3() {
     name: "Shingeki no Kyojin Violin",
     artist: "Hiroyuki Sawano",
     path: "music/aot-part1.opus",
-    image: "resimler/petra.gif",
+    image: "resimler/petra.webp",
     spotify_url: "https://youtu.be/nAV_zyhC4EE",
   }, {
     name: "Shingeki no Kyojin Piano",
@@ -685,6 +685,35 @@ function getTracks3() {
   fillTheMusicList(value, "Attack On Titan")
   localStorage.setItem("lastPlaylist", JSON.stringify({ playlistName: "Attack On Titan", playlistId: "aot", PlaylistValue: track_index }));
   pauseTrack();
+  tracklist_right.scrollBy(0, -900000);
+  renk();
+}
+function getTracksI() {
+  playlist_img.style.backgroundImage = "url('https://i.scdn.co/image/ab67706c0000bebb37df9968650657305b022117')";
+  var value = [{
+    name: "Siyah Gözlere",
+    artist: "Seyyan Hanım",
+    path: "music/siyah-gozlere.mp3",
+    image: "resimler/plak.gif",
+    spotify_url: "https://youtu.be/WYiqqqm62Y4",
+  },
+  ]
+  track_list = value;
+  FillRandomTrackList(value);
+  curr_track.volume = volume_slider.value / 500;
+  document.querySelectorAll(".listeler").forEach(p => {
+    p.style.color = "rgba(255, 255, 255, 0.63)";
+  })
+  if (typeof loadTrackk === 'object' && first == false) {
+    track_index = (loadTrackk?.ix);
+    first = true;
+  }
+  else {
+    track_index = 0;
+  }
+  loadTrack(track_index);
+  fillTheMusicList(value, "İlayza <i style='color:red;' class='fa-solid fa-heart'></i> Eren")
+  playTrack();
   tracklist_right.scrollBy(0, -900000);
   renk();
 }

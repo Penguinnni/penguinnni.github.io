@@ -311,8 +311,6 @@
                 <hr><br>
                 <div class="listeler" onclick="getTracksByPlaylistId('7M2KMprNurcSVb35h2Er2F','LC Waikiki Müzikleri')" id="7M2KMprNurcSVb35h2Er2F">LC Waikiki Müzikleri</div><br>
                 <hr><br>
-                <div class="listeler" onclick="getTracksByPlaylistId('7wmAWbQURZa1jwYQkJEduj','Winx Club')" id="7wmAWbQURZa1jwYQkJEduj">Winx Club</div><br>
-                <hr><br>
                 <div class="listeler" onclick="getTracksByPlaylistId('7v0k2Enal18taY4ICUkXqc','Hüseyin Aktepenin Takla Atarken Dinlediği Şarkılar')" id="7v0k2Enal18taY4ICUkXqc">Hüseyin Aktepenin Takla Atarken Dinlediği Şarkılar</div><br>
                 <hr><br>
                 <div class="listeler" onclick="getTracksByPlaylistId('1pw9A9tfChGgB75JUixlG1','A101’de kasiyer olacağım aklıma gelince dinlediğim şarkılar')" id="1pw9A9tfChGgB75JUixlG1">A101’de kasiyer olacağım aklıma gelince dinlediğim şarkılar</div><br>
@@ -340,7 +338,7 @@
             </div>  
             <div class="playlist-img"></div>
         </div>
-            <div class="player" onload="onloadd()">
+            <div class="player">
                 <div class="details">
                   <div class="now-playing">PLAYING 0 OF 0</div>
                   <div class="track-art" onclick="tikla()"></div>
@@ -378,6 +376,7 @@
   shortcut.add("alt+j", function() {prevTrack()});
   shortcut.add("k", function() {playpauseTrack()});
   shortcut.add("space", function() {playpauseTrack()});
+  shortcut.add("shift+i", function() {getTracksI()});
 </script>
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 
