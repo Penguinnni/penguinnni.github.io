@@ -518,7 +518,7 @@ function getTracks2() {
     name: "In This Shirt",
     artist: "The Irrepressibles",
     path: "music/imLost.mp3",
-    image: "resimler/handF.gif",
+    image: "resimler/handf.gif",
     spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",
   }, {
     name: "Pop Style",
