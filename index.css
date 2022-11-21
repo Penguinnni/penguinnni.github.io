@@ -1,0 +1,327 @@
+body{
+    overflow :scroll;
+    font-family: 'Red Hat Display', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: hsl(230, 40%, 80%);
+    background-color: rgb(34, 34, 34);
+    overflow-y: hidden;
+    overflow-x: hidden;
+    user-select: none;
+}
+.kapsayici{
+    margin: auto;
+}
+.top{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.267);
+    width: 100%;
+    height: 8.4vh;
+    align-items: center;
+    display: flex;
+    backdrop-filter: blur(10px);
+}
+.top img{
+    float: left;
+    width: 4vw;
+    height: auto;
+    margin-left: 25%; 
+}
+.top p{
+    padding-left: 20%; 
+    font-size: 3vw;
+    cursor: default;
+    color: hsl(0, 0%, 51%);
+    animation: lights 5s 750ms linear infinite;
+}
+.kutular{
+    margin: auto;
+}
+.menu{
+    font-size: 1.35vw;
+    float: left;
+    margin-right: 50px;
+    text-align: center;    
+}
+.menu a{
+    text-decoration: none;
+    transition: all 0.2s ease-out;
+    color: white; 
+}
+.menu a:hover{
+    transition: all 0.2s ease-out;
+    text-decoration: none;
+    color:rgb(192, 0, 0);
+}
+.login{
+    font-size: 1.3vw;
+    margin-right: 2%;  
+    width: 16vw; 
+}
+.track-button{
+    margin-left: 5%;
+    border: transparent;
+    color: black;
+    background-color: white;
+    width: 9vw;
+    height: 4vh;
+    cursor: pointer;
+    font-size: 1.3vw;
+}
+.login button{
+    margin-left: 5%;
+    border: transparent;
+    color: black;
+    background-color: white;
+    width: 9vw;
+    height: 4vh;
+    cursor: pointer;
+    font-size: 1.3vw;
+    transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+    -ms-transition: all 0.2s ease-in;
+}
+.login a{
+    transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    -ms-transition: all 0.1s ease-in;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.login a:hover{
+    color:rgb(192, 0, 0);
+}
+hr{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    float: left;
+}
+.uc{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.leftAna{
+    width: 13vw;
+    height: 92vh;
+}
+.left{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    color: antiquewhite;
+    background-color: #00000067;
+    width: 13vw;
+    height: 65.5vh;
+    text-align: center;
+    font-size: 0.85vw;
+    backdrop-filter: blur(10px);
+}
+.right{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    color: antiquewhite;
+    background-color: #00000067;
+
+    font-size: 0.85vw;
+    width: 15vw;
+    height: 92vh;
+    text-align: center;
+}
+.marquee{
+    display:block;
+}
+.playlist-img{
+width: 13vw;
+height: 26vh;
+background-color: rgba(0, 0, 0, 0.575);
+position: fixed;
+background-size: cover;
+float: left;
+z-index: -1;
+}
+.icon-ana{
+  font-size: 1.5vw;
+}
+.icon-buyuk{
+font-size: 3vw;
+}
+.right::-webkit-scrollbar
+{
+    width: 0.2vw;
+}
+.right::-webkit-scrollbar-thumb
+{
+    background-color: white;
+}
+.left::-webkit-scrollbar
+{
+    width: 0.2vw;
+}
+.left::-webkit-scrollbar-thumb
+{
+    background-color: white;
+}
+
+.left hr{
+    width: 85%;
+    margin-left: 7%;
+    margin-right: 7%;
+    border-color: #30353a;
+}
+.right hr{
+    width: 85%;
+    margin-left: 7%;
+    margin-right: 7%;
+    border-color: #30353a;
+}
+.listeler{
+    transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    -ms-transition: all 0.1s ease-in;
+    color: rgba(255, 255, 255, 0.63); 
+    text-align: center;
+    align-items: center;
+    display:flex;
+    justify-content: center;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+.listeler:hover{
+    color: white;
+}
+.listelerR{
+    transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    -ms-transition: all 0.1s ease-in;
+    color: rgba(255, 255, 255, 0.63); 
+    text-align: center;
+    align-items: center;
+    display:flex;
+    justify-content: center;
+    font-size: 1.2em;
+    cursor: pointer;
+    overflow: auto;
+}
+.listeleR:hover{
+    color: white;
+}
+.playlist{
+    transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    -ms-transition: all 0.1s ease-in;
+    color: rgb(255, 255, 255);
+    font-size: 1.5em;
+    cursor: default;
+    width: 13vw;
+    height: 4vh;
+    text-align: center;
+    align-items: center;    
+    display:grid;
+    position: sticky;
+    margin-bottom: 1vw;
+}
+.playlist hr{
+    width: 200px;
+    margin-left: 20px; 
+    border-color: hsl(0, 0%, 0%);
+}
+@keyframes lights {
+0% {
+color: hsl(0, 0%, 51%);
+text-shadow:
+  0 0 1em hsla(320, 100%, 50%, 0.2),
+  0 0 0.125em hsla(320, 100%, 60%, 0.3),
+  -1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+  1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+}
+
+30% { 
+color: hsl(0, 0%, 73%);
+text-shadow:
+  0 0 1em hsla(320, 100%, 50%, 0.5),
+  0 0 0.125em hsla(320, 100%, 60%, 0.5),
+  -0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+  0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+}
+
+40% { 
+color: hsl(0, 0%, 86%);
+text-shadow:
+  0 0 1em hsla(320, 100%, 50%, 0.5),
+  0 0 0.125em hsla(320, 100%, 90%, 0.5),
+  -0.25em -0.125em 0.125em hsla(40, 100%, 60%, 0.2),
+  0.25em 0.125em 0.125em hsla(200, 100%, 60%, 0.4);
+}
+
+70% {
+color: hsl(0, 0%, 73%);
+text-shadow:
+  0 0 1em hsla(320, 100%, 50%, 0.5),
+  0 0 0.125em hsla(320, 100%, 60%, 0.5),
+  0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+  -0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+}
+
+100% {
+color: hsl(0, 0%, 51%);
+text-shadow:
+  0 0 1em hsla(320, 100%, 50%, 0.2),
+  0 0 0.125em hsla(320, 100%, 60%, 0.3),
+  1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+  -1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+}
+}
+@media (max-width: 768px) {
+    .kapsayici{
+        flex-direction: column;
+    }
+    .top{
+        width: 100%;
+        height: 20%;
+        align-items: center;
+        display: flex;
+    }
+    .top img{
+        float: left;
+        margin-left: 25%; 
+    }
+    .top p{
+        padding-left: 20%; 
+        font-size: 3vw;
+    }
+    .leftAna,.menu{
+        display: none;
+    }
+    .right{
+        font-size: 2vw;
+        width: 100%;
+        height: 70vh;
+        float: left;
+    }
+    .marquee{
+        display:none;
+    }
+    .right hr{
+        background-color: #30353a;
+        height: 0.1px;
+        float: none;
+    }
+    .uc{
+        height: 80%;
+        flex-direction: column-reverse;
+    }
+    .icon-ana{
+        font-size: 2vw;
+      }
+      .icon-buyuk{
+      font-size: 4vw;
+      }
+
+}
