@@ -97,6 +97,18 @@ function playMusic(track_indexx) {
   renk();
 }
 
+function barClick(){
+  document.querySelectorAll(".right").forEach(p => {
+    p.style.display = "none"; 
+  })
+  document.querySelectorAll(".leftAna").forEach(a => {
+    a.style.display = "hidden"; 
+  })
+  document.querySelectorAll(".left").forEach(a => {
+    a.style.display = "hidden"; 
+  })
+}
+
 function tikla(x) {
   if (track_index < 7) {
     x = 0;

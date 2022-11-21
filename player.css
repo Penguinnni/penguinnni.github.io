@@ -175,10 +175,10 @@ i.fa-play-circle, i.fa-pause-circle, i.fa-step-forward, i.fa-step-backward {
     cursor: pointer;
     transition: opacity 0.2s;
     transition: all 0.1s ease-in;
+
   }
-  i.fa-volume-down, i.fa-volume-up {
-    padding: 10px;
-    font-size: 1.5vw;
+  i.fa-volume-down, i.fa-volume-up, .volume_slider{
+    display: none;
   }
   .current-time, .total-duration {
     padding: 2vw;
@@ -186,5 +186,8 @@ i.fa-play-circle, i.fa-pause-circle, i.fa-step-forward, i.fa-step-backward {
     display:block;
     text-align: center;
     width: 2.5vw;
+  }
+  .seek_slider {
+    width: 80%;
   }
 }
