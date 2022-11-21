@@ -75,7 +75,7 @@ function FillRandomTrackList(trackl) {
 }
 
 function fillTheMusicList(trackL, playlistName) {
-  var str = "<div class=\"playlist\"><b><marquee>" + playlistName + "</marquee></b></div>";
+  var str = "<div class=\"playlist\"><b class='marquee'><marquee>" + playlistName + "</marquee></b></div>";
 
   trackL.map((item, index) => {
     str = str + "<div><div id=" + index + " class=\"listelerR\" onclick=\"playMusic(" + index + ")\" >" + item.name + "</div><br><hr><br></div>";
@@ -110,7 +110,6 @@ function tikla(x) {
     tracklist_right.scrollBy(konum);
   }
 }
-
 
 function loadTrack(track_index) {
   clearInterval(updateTimer);
@@ -395,6 +394,12 @@ function getTracksByPlaylistId(id, playlistName) {
 function getTracks2() {
   playlist_img.style.backgroundImage = "url('resimler/nightCity.jpg')";
   var value = [{
+    name: "Miss You",
+    artist: "Oliver Tree, Robin Schulz",
+    path: "music/southstar-miss-you.m4a",
+    image: "resimler/southstar-miss-you.webp",
+    spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",
+  },{
     name: "Daddy Issues",                // Müzik ismi
     artist: "The Neighbourhood",              // Sanatçı ismi
     path: "music/Daddy Issues.mp3",                // Müziğin Konumu
@@ -593,6 +598,12 @@ function getTracks3() {
     path: "music/mw.mp3",
     image: "resimler/aot3.webp",
     spotify_url: "https://youtu.be/6TolbTZXDjI",
+  },{
+    name: "Marley",
+    artist: "Hiroyuki Sawano",
+    path: "music/rumbling-marley.opus",
+    image: "resimler/black.gif",
+    spotify_url: "https://youtu.be/_nm_T0qjwjc",
   }, {
     name: "Shingeki no Kyojin Violin",
     artist: "Hiroyuki Sawano",
@@ -661,7 +672,7 @@ function getTracks3() {
     spotify_url: "https://youtu.be/c7NMfDeIMHs",
   }, {
     name: "ThanksAT",
-    artist: "Hiroyuki Sawano",
+    artist: "Samuel Kim",
     path: "music/aot-thanks.opus",
     image: "resimler/eren.gif",
     spotify_url: "https://youtu.be/hoJ4qxcXz5w",
