@@ -136,7 +136,7 @@ i.fa-play-circle, i.fa-pause-circle, i.fa-step-forward, i.fa-step-backward {
   }
   .track-art {
     height: 20vw;
-    width: 20%;
+    width: 20vw;
     background-image: url("resimler/loading.gif");
     background-size: cover;
     border-radius: 0%;
@@ -155,15 +155,14 @@ i.fa-play-circle, i.fa-pause-circle, i.fa-step-forward, i.fa-step-backward {
   .buttons {
     display: flex;
     justify-content: center;
-    width: 78%;
+    width: 77%;
     color: rgb(255, 255, 255);
     float: left;
     margin-top: 3%;
   }
   .slider_container {
-    width: 78%;
-    height: 2.5vw;
-    margin-top: 10%;
+    width: 70vw;
+    margin-top: 1vh;
   }
   i.fa-volume-down, i.fa-volume-up, .volume_slider{
     display: none;
@@ -182,16 +181,5 @@ i.fa-play-circle, i.fa-pause-circle, i.fa-step-forward, i.fa-step-backward {
   .seek_slider::-webkit-slider-thumb{
     width: 3vw;
     height: 3vw;
-  }
-}
-@media (max-width: 500px) {
-  .slider_container {
-    width: 55vw;
-  }
-  .player{
-    width: 100%;
-    height: 20vh;
-    background-color: rgba(0, 0, 0, 0.267);
-    margin-bottom: 0%;
   }
 }
