@@ -31,6 +31,7 @@ let track_list = [];
 
 let statusD = "disabled";
 let statusL = "disabled";
+var bar = "active";
 
 window.addEventListener('load', (event) => {
   statusD = localStorage.getItem("RandomButtonStatus");
@@ -98,15 +99,20 @@ function playMusic(track_indexx) {
 }
 
 function barClick(){
-  document.querySelectorAll(".right").forEach(p => {
-    p.style.display = "none"; 
-  })
-  document.querySelectorAll(".leftAna").forEach(a => {
-    a.style.display = "hidden"; 
-  })
-  document.querySelectorAll(".left").forEach(a => {
-    a.style.display = "hidden"; 
-  })
+  if(bar=="active"){
+    bar="disabled";
+
+      $(".uc").css("display", "flex");
+      $(".uc").css("flex-direction", "");
+  }
+  else if(bar != "active"){
+    bar="active";
+    
+      $(".uc").css("flex-direction", "column-reverse;");
+      $(".uc").css("display", "inline");
+
+  }
+  console.log(b);
 }
 
 function tikla(x) {
@@ -175,14 +181,12 @@ function randomAktif() {
     if (statusL == "active") {
       loopAktif();
     }
-    console.log("a");
   }
   else if (statusD == "active") {
     localStorage.setItem("RandomButtonStatus", "disabled");
     random_TrackList = [];
     statusD = "disabled";
     ChangeRandomButtonColor();
-    console.log("b");
   }
 }
 function ChangeRandomButtonColor() {
