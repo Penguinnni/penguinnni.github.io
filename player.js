@@ -31,7 +31,7 @@ let track_list = [];
 
 let statusD = "disabled";
 let statusL = "disabled";
-var bar = "disabled";
+var bar = "active";
 
 window.addEventListener('load', (event) => {
   statusD = localStorage.getItem("RandomButtonStatus");
@@ -400,8 +400,9 @@ function getTracksByPlaylistId(id, playlistName) {
     else {
       track_index = 0;
     }
-    loadTrack(track_index);
     fillTheMusicList(value, playlistName)
+    loadTrack(track_index);
+
     renk();
     localStorage.setItem("lastPlaylist", JSON.stringify({ playlistName: playlistName, playlistId: id, PlaylistValue: track_index }));
   });
