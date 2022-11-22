@@ -49,8 +49,7 @@ window.addEventListener('load', (event) => {
   }
 });
 let lastPlaylist = JSON.parse(localStorage.getItem("lastPlaylist"));
-console.log(lastPlaylist)
-if (typeof lastPlaylist === 'object') {
+if (lastPlaylist != undefined) {
 
   switch (lastPlaylist.playlistId) {
     case "slow": {
@@ -66,6 +65,12 @@ if (typeof lastPlaylist === 'object') {
     }
   }
 }
+else{
+  getTracks2();
+}
+
+console.log(lastPlaylist);
+
 
 function FillRandomTrackList(trackl) {
   var x = []
@@ -114,9 +119,7 @@ function barClick(){
       $(".uc").css("display", "inline");
       $(".right").css("display", "none");
       $(".leftAna").css("display", "block");
-      
   }
-  console.log(b);
 }
 
 function tikla(x) {
@@ -143,6 +146,7 @@ function loadTrack(track_index) {
   track_name.textContent = track_list[track_index].name;
   track_artist.textContent = track_list[track_index].artist;
   now_playing.textContent = "PLAYING " + (track_index + 1) + " OF " + track_list.length;
+
 
   if (track_list[track_index].name.length > 43) {
     track_name.style = " text-align:center; white-space: nowrap; width: 30vw; overflow: hidden; text-overflow: ellipsis; height: 2.5vw; padding-left: 5%; "
@@ -404,9 +408,8 @@ function getTracksByPlaylistId(id, playlistName) {
     else {
       track_index = 0;
     }
-    fillTheMusicList(value, playlistName)
     loadTrack(track_index);
-
+    fillTheMusicList(value, playlistName)
     renk();
     localStorage.setItem("lastPlaylist", JSON.stringify({ playlistName: playlistName, playlistId: id, PlaylistValue: track_index }));
   });
@@ -595,8 +598,8 @@ function getTracks2() {
   else {
     track_index = 0;
   }
-  loadTrack(track_index);
   fillTheMusicList(value, "S L O W E D + R E V E R B")
+  loadTrack(track_index);
   localStorage.setItem("lastPlaylist", JSON.stringify({ playlistName: "S L O W E D + R E V E R B", playlistId: "slow" }));
   pauseTrack();
   tracklist_right.scrollBy(0, -900000);
