@@ -175,11 +175,11 @@ i.fa-play-circle, i.fa-pause-circle, i.fa-step-forward, i.fa-step-backward {
     width: 6vw;
   }
   .seek_slider {
-    width: 80%;
-    height: 30%;
+    width: 80vw;
+    height: 0.3vh;
   }
   .seek_slider::-webkit-slider-thumb{
-    width: 3vw;
-    height: 3vw;
+    width: 1.5vh;
+    height: 1.5vh;
   }
 }

@@ -104,13 +104,17 @@ function barClick(){
 
       $(".uc").css("display", "flex");
       $(".uc").css("flex-direction", "column-reverse;");
+      $(".leftAna").css("display", "none");
+      $(".right").css("display", "block");
   }
   else if(bar != "active"){
     bar="active";
 
       $(".uc").css("flex-direction", "column-reverse;");
       $(".uc").css("display", "inline");
-
+      $(".right").css("display", "none");
+      $(".leftAna").css("display", "block");
+      
   }
   console.log(b);
 }
