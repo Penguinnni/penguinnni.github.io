@@ -275,8 +275,12 @@ text-shadow:
 }
 }
 @media (max-width: 768px) {
+    body{
+        height: 100vh;
+    }
     .kapsayici{
         flex-direction: column;
+        height: 100vh;
     }
     .top{
         width: 100%;
