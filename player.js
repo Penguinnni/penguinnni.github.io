@@ -406,6 +406,9 @@ function getTracksByPlaylistId(id, playlistName) {
     localStorage.setItem("lastPlaylist", JSON.stringify({ playlistName: playlistName, playlistId: id, PlaylistValue: track_index }));
   });
   pauseTrack();
+  if(screen.width <= 768){
+    barClick();
+  }
 }
 function getTracks2() {
   playlist_img.style.backgroundImage = "url('resimler/nightCity.jpg')";
@@ -593,6 +596,9 @@ function getTracks2() {
   pauseTrack();
   tracklist_right.scrollBy(0, -900000);
   renk();
+  if(screen.width <= 768){
+    barClick();
+  }
 }
 function getTracks3() {
   playlist_img.style.backgroundImage = "url('resimler/aot.jpg')";
@@ -714,6 +720,9 @@ function getTracks3() {
   pauseTrack();
   tracklist_right.scrollBy(0, -900000);
   renk();
+  if(screen.width <= 768){
+    barClick();
+  }
 }
 function getTracksI() {
   playlist_img.style.backgroundImage = "url('https://i.scdn.co/image/ab67706c0000bebb37df9968650657305b022117')";
