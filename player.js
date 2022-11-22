@@ -31,7 +31,7 @@ let track_list = [];
 
 let statusD = "disabled";
 let statusL = "disabled";
-var bar = "active";
+var bar = "disabled";
 
 window.addEventListener('load', (event) => {
   statusD = localStorage.getItem("RandomButtonStatus");
@@ -103,11 +103,11 @@ function barClick(){
     bar="disabled";
 
       $(".uc").css("display", "flex");
-      $(".uc").css("flex-direction", "");
+      $(".uc").css("flex-direction", "column-reverse;");
   }
   else if(bar != "active"){
     bar="active";
-    
+
       $(".uc").css("flex-direction", "column-reverse;");
       $(".uc").css("display", "inline");
 
