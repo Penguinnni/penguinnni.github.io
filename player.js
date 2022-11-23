@@ -49,6 +49,7 @@ window.addEventListener('load', (event) => {
   }
 });
 let lastPlaylist = JSON.parse(localStorage.getItem("lastPlaylist"));
+
 if (lastPlaylist != undefined) {
 
   switch (lastPlaylist.playlistId) {
