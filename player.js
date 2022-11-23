@@ -123,17 +123,33 @@ function barClick(){
 }
 
 function tikla(x) {
-  if (track_index < 7) {
-    x = 0;
-    var konum = document.getElementById(x).getBoundingClientRect();
-    tracklist_right.scrollBy(konum);
-    tracklist_right.scrollBy(0, -1000);
+  if(screen.width > 768){
+    if (track_index < 7) {
+      x = 0;
+      var konum = document.getElementById(x).getBoundingClientRect();
+      tracklist_right.scrollBy(konum);
+      tracklist_right.scrollBy(0, -1000);
+    }
+    else {
+      x = track_index - 7;
+      var konum = document.getElementById(x).getBoundingClientRect();
+      tracklist_right.scrollBy(konum);
+    }
   }
-  else {
-    x = track_index - 7;
-    var konum = document.getElementById(x).getBoundingClientRect();
-    tracklist_right.scrollBy(konum);
+  else{
+    if (track_index < 4) {
+      x = 0;
+      var konum = document.getElementById(x).getBoundingClientRect();
+      tracklist_right.scrollBy(konum);
+      tracklist_right.scrollBy(0, -1000);
+    }
+    else {
+      x = track_index - 4;
+      var konum = document.getElementById(x).getBoundingClientRect();
+      tracklist_right.scrollBy(konum);
+    }
   }
+
 }
 
 function loadTrack(track_index) {

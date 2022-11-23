@@ -280,11 +280,11 @@ text-shadow:
     }
     .kapsayici{
         flex-direction: column;
-        height: 100vh;
+        max-height: 100vh;
     }
     .top{
         width: 100%;
-        height: 10vh;
+        max-height: 10vh;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -297,7 +297,7 @@ text-shadow:
         font-size: 200%;
         width: 200px;
     }
-    .menu,.pLogo,#qfcx8,.login,.playlist-img{
+    .menu,.pLogo,#qfcx8,.login,.playlist-img,.playlist{
         display: none;
     }
     .right{
@@ -310,11 +310,6 @@ text-shadow:
         width: 100%;
         height: 70vh;
     }
-
-    .playlist{
-        width: 100%;
-        padding-bottom: 5%;
-    }
     .marquee{
         display:none;
     }
@@ -325,6 +320,7 @@ text-shadow:
     .uc{
         flex-direction:column-reverse;
         display: flex;
+        max-height: 70vh;
     }
     .icon-ana{
         font-size: 4vw;
@@ -362,56 +358,16 @@ text-shadow:
     }
 }
 @media (max-width: 450px) {
-    body{
-        height: 100vh;
-    }
-    .kapsayici{
-        flex-direction: column;
-        height: 100vh;
-    }
-    .top{
-        width: 100%;
-        height: 10vh;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .top img{
-        margin-left: 25%; 
-    }
-    .penguinnni{
-        text-align: center;
-        font-size: 200%;
-        width: 200px;
-    }
-    .menu,.pLogo,#qfcx8,.login,.playlist-img{
-        display: none;
-    }
+
     .right{
         font-size: 4.8vw;
         width: 100%;
         height: 70vh;
     }
     .leftAna,.left{
-        font-size: 3vw;
+        font-size: 4.8vw;
         width: 100%;
         height: 70vh;
-    }
-
-    .playlist{
-        width: 100%;
-        padding-bottom: 5%;
-    }
-    .marquee{
-        display:none;
-    }
-    .right hr{
-        background-color: #30353a;
-        height: 0.1px;
-    }
-    .uc{
-        flex-direction:column-reverse;
-        display: flex;
     }
     .icon-ana{
         font-size: 4vw;
@@ -421,30 +377,5 @@ text-shadow:
       .icon-buyuk{
       font-size: 8vw;
       }
-    .pBar{
-        width: 50px;
-        height: 6vh;
-        margin-left: 1.5%;
-        margin-left: 5%;
-        border: transparent;
-        color: black;
-        background-color: rgb(192, 16, 16);
-        cursor: pointer;
-        font-size: 150%;
-        border-radius: 10px;
-        display: inline;
-    }
-    #qqa7{
-        display: inline;
-        margin-left: 10px;
-        margin-right: 10px;
 
-    }
-    #qqa7 button{
-        height: 6vh;
-        width: 50px;
-        font-size: 150%;
-        border-radius: 10px;
-        border: transparent;
-    }
 }
