@@ -423,12 +423,12 @@ function getTracksByPlaylistId(id, playlistName) {
     else {
       track_index = 0;
     }
+    fillTheMusicList(value, playlistName)
     if(screen.width > 768){
       loadTrack(track_index);
       pauseTrack();
       renk();
     }
-    fillTheMusicList(value, playlistName)
     localStorage.setItem("lastPlaylist", JSON.stringify({ playlistName: playlistName, playlistId: id, PlaylistValue: track_index }));
   });
   if(screen.width <= 768){
@@ -771,12 +771,12 @@ function getTracks3() {
   else {
     track_index = 0;
   }
+  fillTheMusicList(value, "Attack On Titan")
   if(screen.width > 768){
     loadTrack(track_index);
     pauseTrack();
     renk();
   }
-  fillTheMusicList(value, "Attack On Titan")
   localStorage.setItem("lastPlaylist", JSON.stringify({ playlistName: "Attack On Titan", playlistId: "aot", PlaylistValue: track_index }));
   tracklist_right.scrollBy(0, -900000);
   if(screen.width <= 768){
