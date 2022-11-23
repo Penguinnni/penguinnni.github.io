@@ -31,7 +31,7 @@ let track_list = [];
 
 let statusD = "disabled";
 let statusL = "disabled";
-var bar = "active";
+var bar = "disabled";
 
 window.addEventListener('load', (event) => {
   statusD = localStorage.getItem("RandomButtonStatus");
@@ -107,16 +107,16 @@ function barClick(){
   if(bar=="active"){
     bar="disabled";
 
+      $(".uc").css("justify-content:", "flex-start");
       $(".uc").css("display", "flex");
-      $(".uc").css("flex-direction", "column-reverse;");
       $(".leftAna").css("display", "none");
       $(".right").css("display", "block");
   }
   else if(bar != "active"){
     bar="active";
 
-      $(".uc").css("flex-direction", "column-reverse;");
-      $(".uc").css("display", "inline");
+      $(".uc").css("justify-content:", "flex-start");
+      $(".uc").css("display", "block");
       $(".right").css("display", "none");
       $(".leftAna").css("display", "block");
   }
@@ -578,7 +578,7 @@ function getTracks2() {
     name: "Fantasy",
     artist: "Bazzi",
     path: "music/slow/fantasy.mp3",
-    image: "resimler/black.gif",
+    image: "resimler/loading.gif",
     spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",
   }, {
     name: "Guilty Hero Slowed",
@@ -597,6 +597,36 @@ function getTracks2() {
     artist: "Matt Maltese",
     path: "music/slow/AsTheWorldCavesIn.opus",
     image: "resimler/rain.gif",
+    spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",
+  }, {
+    name: "Shootout",
+    artist: "Izzamuzzic",
+    path: "music/slow/Shootout.opus",
+    image: "resimler/black.gif",
+    spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",
+  }, {
+    name: "Snowfall",
+    artist: "Øneheart & Reidenshi",
+    path: "music/slow/snowfall.opus",
+    image: "resimler/loading.gif",
+    spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",
+  },{
+    name: "Feaks",
+    artist: "Surf Curse",
+    path: "music/slow/Feaks.opus",
+    image: "resimler/loading.gif",
+    spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",
+  },{
+    name: "Chamber Of Reflection",
+    artist: "Mac DeMarco",
+    path: "music/slow/ChamberOfReflection.opus",
+    image: "resimler/loading.gif",
+    spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",
+  },{
+    name: "Rises The Moon",
+    artist: "Liana Flores",
+    path: "music/slow/RisesTheMoon.opus",
+    image: "resimler/loading.gif",
     spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",
   },]
   track_list = value;
