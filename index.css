@@ -297,13 +297,13 @@ text-shadow:
     .right{
         font-size: 3vw;
         width: 100%;
-        height: 65vh;
+        height: 70vh;
         display: none;
     }
     .leftAna,.left{
         font-size: 3vw;
         width: 100%;
-        height: 65vh;
+        height: 70vh;
     }
     .right hr{
         background-color: #30353a;
