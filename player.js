@@ -84,7 +84,7 @@ function fillTheMusicList(trackL, playlistName) {
   var str = "<div class=\"playlist\"><b class='marquee'><marquee>" + playlistName + "</marquee></b></div>";
 
   trackL.map((item, index) => {
-    str = str + "<div><div id=" + index + " class=\"listelerR\" onclick=\"playMusic(" + index + ")\" >" + item.name + "</div><br><hr><br></div>";
+    str = str + "<div><hr><br><div id=" + index + " class=\"listelerR\" onclick=\"playMusic(" + index + ")\" >" + item.name + "</div><br></div>";
 
   })
 
@@ -172,7 +172,7 @@ function loadTrack(track_index) {
   if (track_list[track_index].artist.length > 100) {
     track_artist.style = " text-align:center; white-space: nowrap; width: 30vw; overflow: hidden; height: 1.6vw; text-overflow: clip;"
     var tA = "<marquee>" + track_list[track_index].artist + "</marquee>";
-    track_artist.innerHTML = tA;
+    track_artist.innerHTML = tA ;
   }
   else {
     track_artist.style = " "
@@ -422,12 +422,14 @@ function getTracksByPlaylistId(id, playlistName) {
     else {
       track_index = 0;
     }
-    loadTrack(track_index);
+    if(screen.width > 768){
+      loadTrack(track_index);
+      pauseTrack();
+      renk();
+    }
     fillTheMusicList(value, playlistName)
-    renk();
     localStorage.setItem("lastPlaylist", JSON.stringify({ playlistName: playlistName, playlistId: id, PlaylistValue: track_index }));
   });
-  pauseTrack();
   if(screen.width <= 768){
     barClick();
   }
@@ -643,11 +645,13 @@ function getTracks2() {
     track_index = 0;
   }
   fillTheMusicList(value, "S L O W E D + R E V E R B")
-  loadTrack(track_index);
+  if(screen.width > 768){
+    loadTrack(track_index);
+    pauseTrack();
+    renk();
+  }
   localStorage.setItem("lastPlaylist", JSON.stringify({ playlistName: "S L O W E D + R E V E R B", playlistId: "slow" }));
-  pauseTrack();
   tracklist_right.scrollBy(0, -900000);
-  renk();
   if(screen.width <= 768){
     barClick();
   }
@@ -766,12 +770,14 @@ function getTracks3() {
   else {
     track_index = 0;
   }
-  loadTrack(track_index);
+  if(screen.width > 768){
+    loadTrack(track_index);
+    pauseTrack();
+    renk();
+  }
   fillTheMusicList(value, "Attack On Titan")
   localStorage.setItem("lastPlaylist", JSON.stringify({ playlistName: "Attack On Titan", playlistId: "aot", PlaylistValue: track_index }));
-  pauseTrack();
   tracklist_right.scrollBy(0, -900000);
-  renk();
   if(screen.width <= 768){
     barClick();
   }

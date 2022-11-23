@@ -11,6 +11,7 @@ body{
 }
 .kapsayici{
     margin: auto;
+    height: 100vh;
 }
 .top{
     color: white;
@@ -219,7 +220,6 @@ font-size: 3vw;
     align-items: center;    
     display:grid;
     position: sticky;
-    margin-bottom: 1vw;
 }
 .playlist hr{
     width: 200px;
