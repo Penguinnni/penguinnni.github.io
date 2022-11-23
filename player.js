@@ -107,7 +107,6 @@ function barClick(){
   if(bar=="active"){
     bar="disabled";
 
-      $(".uc").css("justify-content:", "flex-start");
       $(".uc").css("display", "flex");
       $(".leftAna").css("display", "none");
       $(".right").css("display", "block");
@@ -115,7 +114,6 @@ function barClick(){
   else if(bar != "active"){
     bar="active";
 
-      $(".uc").css("justify-content:", "flex-start");
       $(".uc").css("display", "block");
       $(".right").css("display", "none");
       $(".leftAna").css("display", "block");
