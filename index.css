@@ -7,18 +7,17 @@ body{
     background-color: rgb(34, 34, 34);
     overflow-y: hidden;
     overflow-x: hidden;
-    user-select: none;
-    max-height: 100%;
+    height: 100vh;
 }
 .kapsayici{
     margin: auto;
-    height: 100%;
+    height: 100vh;
 }
 .top{
     color: white;
     background-color: rgba(0, 0, 0, 0.267);
     width: 100%;
-    height: 8.4vh;
+    height: 10vh;
     align-items: center;
     display: flex;
     backdrop-filter: blur(10px);
@@ -99,12 +98,13 @@ hr{
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    height: 90vh;
     margin: 0;
     padding: 0;
 }
 .leftAna{
     width: 13vw;
-    height: 92vh;
+    height: 90vh;
     display: block;
 }
 .left{
@@ -113,7 +113,7 @@ hr{
     color: antiquewhite;
     background-color: #00000067;
     width: 13vw;
-    height: 65.5vh;
+    height: 65vh;
     text-align: center;
     font-size: 0.85vw;
 }
@@ -124,22 +124,22 @@ hr{
     background-color: #00000067;
     font-size: 0.85vw;
     width: 15vw;
-    height: 92vh;
+    height: 90vh;
     text-align: center;
 }
 .marquee{
     display:block;
+    margin-top: 0.5vh;
 }
 #qqa7{
     display: none;
 }
 .playlist-img{
 width: 13vw;
-height: 26vh;
+height: 25vh;
 background-color: rgba(0, 0, 0, 0.575);
 position: fixed;
 background-size: cover;
-float: left;
 z-index: -1;
 }
 .icon-ana{
@@ -278,7 +278,7 @@ text-shadow:
 }
 @media (max-width: 768px) {
     body{
-        height: 100%;
+        height: 100vh;
     }
     .top{
         width: 90%;
@@ -303,15 +303,22 @@ text-shadow:
     .right{
         font-size: 3vw;
         width: 100vw;
-        height: 70vh;
+        max-height: 70vh;
         display: none;
         margin: 0;
         padding: 0;
     }
-    .leftAna,.left{
+    .left{
+        font-size: 3vw;
+        width: 100vw;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .leftAna{
         font-size: 3vw;
         width: 100%;
-        height: 70vh;
+        max-height: 70vh;
         margin: 0;
         padding: 0;
     }
@@ -323,7 +330,7 @@ text-shadow:
         justify-content:flex-end;
         flex-direction:column-reverse;
         display: block;
-        max-height: 90%;
+        height: 90vh;
     }
     .icon-ana{
         font-size: 4vw;
@@ -346,7 +353,6 @@ text-shadow:
     }
     #qqa7{
         display: block;
-
     }
     #qqa7 button{
         height: 50px;
@@ -372,5 +378,4 @@ text-shadow:
     .penguinnni{
         font-size: 200%;
     }
-
 }
