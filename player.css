@@ -14,8 +14,8 @@
 
 .track-art {
   margin: 3%;
-  height: 14vw;
-  width: 14vw;
+  height: 16vw;
+  width: 16vw;
   background-image: url("resimler/loading.gif");
   background-size: cover;
   border-radius: 15%;
@@ -123,7 +123,7 @@ i.fa-play-circle, i.fa-pause-circle, i.fa-step-forward, i.fa-step-backward {
 @media (max-width: 768px) {
   .player{
     width: 100vw;
-    height: 20vh;
+    max-height: 20vh;
     background-color: rgba(0, 0, 0, 0.267);
     margin: 0;
   }
@@ -148,7 +148,6 @@ i.fa-play-circle, i.fa-pause-circle, i.fa-step-forward, i.fa-step-backward {
   .now-playing,.track-artist,.track-name{
     display: none;
   }
-
   .buttons {
     display: flex;
     justify-content: center;
