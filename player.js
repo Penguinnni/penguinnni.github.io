@@ -579,7 +579,7 @@ function getTracks2() {
     name: "Fantasy",
     artist: "Bazzi",
     path: "music/slow/fantasy.mp3",
-    image: "resimler/loading.gif",
+    image: "resimler/ae86.gif",
     spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",
   }, {
     name: "Guilty Hero Slowed",
@@ -609,25 +609,43 @@ function getTracks2() {
     name: "Snowfall",
     artist: "Øneheart & Reidenshi",
     path: "music/slow/snowfall.opus",
-    image: "resimler/loading.gif",
+    image: "resimler/snowfall.gif",
     spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",
   },{
     name: "Feaks",
     artist: "Surf Curse",
     path: "music/slow/Feaks.opus",
-    image: "resimler/loading.gif",
+    image: "resimler/leviE.gif ",
     spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",
   },{
     name: "Chamber Of Reflection",
     artist: "Mac DeMarco",
     path: "music/slow/ChamberOfReflection.opus",
-    image: "resimler/loading.gif",
+    image: "resimler/alone.gif",
     spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",
   },{
     name: "Rises The Moon",
     artist: "Liana Flores",
     path: "music/slow/RisesTheMoon.opus",
-    image: "resimler/loading.gif",
+    image: "resimler/3walk.webp",
+    spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",
+  },{
+    name: "Disfruto",
+    artist: "Carla Morrison",
+    path: "music/slow/Disfruto.opus",
+    image: "resimler/hand2.gif",
+    spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",
+  },{
+    name: "Superman",
+    artist: "Eminem & Dina Rae",
+    path: "music/slow/superman.opus",
+    image: "resimler/superman.gif",
+    spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",
+  },{
+    name: "Past Lives",
+    artist: "Sapientdream",
+    path: "music/slow/PastLives.opus",
+    image: "resimler/qqqq.gif",
     spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",
   },]
   track_list = value;
@@ -755,8 +773,7 @@ function getTracks3() {
     path: "music/aot/ThanksAT.opus",
     image: "resimler/eren.gif",
     spotify_url: "https://youtu.be/hoJ4qxcXz5w",
-  },
-  ]
+  },]
   track_list = value;
   FillRandomTrackList(value);
   curr_track.volume = volume_slider.value / 500;
