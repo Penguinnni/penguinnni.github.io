@@ -9,6 +9,7 @@
 <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="./css/uicons-regular-rounded.css">
 <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300&display=swap" rel="stylesheet">
 </head>
 <style>
@@ -18,11 +19,10 @@
         font-family: 'Red Hat Display', sans-serif;
         margin: 0;
         padding: 0;
-        max-width: 1920px;
-        max-height: 1080px;
         color: hsl(230, 40%, 80%);
         background: linear-gradient(135deg, hsl(230, 40%, 12%), hsl(230, 20%, 7%));
-        height: 100vh;    
+        height: 100vh;
+        width: 100vw;
   }
   canvas{
         background:#16181B;
@@ -34,59 +34,90 @@
         background-color: transparent;
     }
     .top{
-        color: white;
-        background-color: rgba(0, 0, 0, 0.267);
-        width: 100%;
-        height: 85px;
-        align-items: center;
-        display: flex;
-        backdrop-filter: blur(10px);
-    }
-    .top img{
-        float: left;
-        padding-left: 20px; 
-        color: hsl(230, 40%, 80%);
-        animation: lights 5s 750ms linear infinite;
-    }
-    .top p{
-        padding-left: 30px; 
-        font-size: 3.6em;
-        cursor: default;
-        color: hsl(230, 40%, 80%);
-        animation: lights 5s 750ms linear infinite;
-    }
-    .login{
-        font-size: 1.5em;
-        margin-right: 40px;
-    }
-    .login button{
-        margin-left: 20px;
-        border: transparent;
-        color: black;
-        background-color: white;
-        width: 130px;
-        height: 40px;
-        cursor: pointer;
-        font-size: 1em;
-        transition: all 0.3s ease-in;
-        -moz-transition: all 0.3s ease-in;
-        -webkit-transition: all 0.3s ease-in;
-        -ms-transition: all 0.2s ease-in;
-    }
-    .login button:hover{
-        color: hsl(230, 40%, 80%);
-    }
-    .login a{
-        transition: all 0.2s ease-in;
-        -moz-transition: all 0.2s ease-in;
-        -webkit-transition: all 0.2s ease-in;
-        -ms-transition: all 0.1s ease-in;
-        color: rgb(255, 255, 255);
-        text-decoration: none;
-    }
-    .login a:hover{
-        color: hsl(230, 40%, 80%);
-    }
+    color: white;
+    background-color: rgba(0, 0, 0, 0.267);
+    width: 100vw;
+    height: 10vh;
+    align-items: center;
+    display: flex;
+    backdrop-filter: blur(10px);
+}
+.penguinnni{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20vw;
+}
+.penguinnni p{
+    padding-left: 1.5vw; 
+    font-size: 3vw;
+    cursor: default;
+    color: hsl(0, 0%, 51%);
+    animation: lights 5s 750ms linear infinite;
+}
+.penguinnni img{
+    width: 4vw;
+    height: auto;
+    margin-left: 1vw; 
+}
+.kutular{
+    margin: auto;
+    width: 35vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 12.5vw;
+    margin-right: 12.5vw;
+}
+.menu{
+    font-size: 1.35vw;
+    text-align: center;    
+}
+.menu a{
+    text-decoration: none;
+    transition: all 0.2s ease-out;
+    color: white; 
+}
+.menu a:hover{
+    transition: all 0.2s ease-out;
+    text-decoration: none;
+    color:rgb(192, 0, 0);
+}
+.pBar{
+    display: none;
+}
+.login{
+    font-size: 1.3vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 20vw;
+}
+.login button{
+    margin-right: 2.5vw;
+    border: transparent;
+    color: black;
+    background-color: white;
+    width: 9vw;
+    height: 4vh;
+    cursor: pointer;
+    font-size: 1.3vw;
+    transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+    -ms-transition: all 0.2s ease-in;
+}
+.login a{
+    transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    -ms-transition: all 0.1s ease-in;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.login a:hover{
+    color:rgb(192, 0, 0);
+}
     hr{
         margin: 0;
         padding: 0;
@@ -94,83 +125,51 @@
         float: left;
         border-color: white;
     }
-    .playlist{
-        transition: all 0.2s ease-in;
-        -moz-transition: all 0.2s ease-in;
-        -webkit-transition: all 0.2s ease-in;
-        -ms-transition: all 0.1s ease-in;
-        color: rgb(255, 255, 255);
-        text-align: center;
-        align-items: center;
-        display:grid;
-        font-size: 1.5em;
-        cursor: default;
-    }
-    .kutular{
-        margin: auto;
-    }
-    .menu{
-        font-size: 1.6em;
-        float: left;
-        margin-right: 50px;
-        text-align: center;
-    }
-    .menu a{
-        text-decoration: none;
-        transition: all 0.2s ease-out;
-        color: white; 
-    }
-    .menu a:hover{
-        transition: all 0.2s ease-out;
-        text-decoration: none;
-        color: hsl(230, 40%, 80%);
-    }
     @keyframes lights {
-  0% {
-    color: hsl(230, 40%, 80%);
-    text-shadow:
-      0 0 1em hsla(320, 100%, 50%, 0.2),
-      0 0 0.125em hsla(320, 100%, 60%, 0.3),
-      -1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
-      1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
-  }
-  
-  30% { 
-    color: hsl(230, 80%, 90%);
-    text-shadow:
-      0 0 1em hsla(320, 100%, 50%, 0.5),
-      0 0 0.125em hsla(320, 100%, 60%, 0.5),
-      -0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
-      0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
-  }
-  
-  40% { 
-    color: hsl(230, 100%, 95%);
-    text-shadow:
-      0 0 1em hsla(320, 100%, 50%, 0.5),
-      0 0 0.125em hsla(320, 100%, 90%, 0.5),
-      -0.25em -0.125em 0.125em hsla(40, 100%, 60%, 0.2),
-      0.25em 0.125em 0.125em hsla(200, 100%, 60%, 0.4);
-  }
-  
-  70% {
-    color: hsl(230, 80%, 90%);
-    text-shadow:
-      0 0 1em hsla(320, 100%, 50%, 0.5),
-      0 0 0.125em hsla(320, 100%, 60%, 0.5),
-      0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
-      -0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
-  }
-  
-  100% {
-    color: hsl(230, 40%, 80%);
-    text-shadow:
-      0 0 1em hsla(320, 100%, 50%, 0.2),
-      0 0 0.125em hsla(320, 100%, 60%, 0.3),
-      1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
-      -1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
-  }
-  
+0% {
+color: hsl(0, 0%, 51%);
+text-shadow:
+  0 0 1em hsla(320, 100%, 50%, 0.2),
+  0 0 0.125em hsla(320, 100%, 60%, 0.3),
+  -1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+  1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+}
+
+30% { 
+color: hsl(0, 0%, 73%);
+text-shadow:
+  0 0 1em hsla(320, 100%, 50%, 0.5),
+  0 0 0.125em hsla(320, 100%, 60%, 0.5),
+  -0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+  0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+}
+
+40% { 
+color: hsl(0, 0%, 86%);
+text-shadow:
+  0 0 1em hsla(320, 100%, 50%, 0.5),
+  0 0 0.125em hsla(320, 100%, 90%, 0.5),
+  -0.25em -0.125em 0.125em hsla(40, 100%, 60%, 0.2),
+  0.25em 0.125em 0.125em hsla(200, 100%, 60%, 0.4);
+}
+
+70% {
+color: hsl(0, 0%, 73%);
+text-shadow:
+  0 0 1em hsla(320, 100%, 50%, 0.5),
+  0 0 0.125em hsla(320, 100%, 60%, 0.5),
+  0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+  -0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+}
+
+100% {
+color: hsl(0, 0%, 51%);
+text-shadow:
+  0 0 1em hsla(320, 100%, 50%, 0.2),
+  0 0 0.125em hsla(320, 100%, 60%, 0.3),
+  1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+  -1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+}
 }
 /* Pen Title */
 .pen-title {
@@ -235,7 +234,8 @@
   position: relative;
   max-width: 460px;
   width: 100%;
-  margin: 0 auto 100px;
+  margin: 5% auto 100px;
+
 }
 .container.active .card:first-child {
   background: #f2f2f2;
@@ -570,16 +570,18 @@ h2 {
 <body>
   <canvas id="canvas" ></canvas>
   <div class="top">
-    <a href="index.html"><img src="resimler/logo.png" width="75" height="75"></a>
-    <div><p>Penguinnni</p></div>
+    <div class="penguinnni">
+      <a class="pLogo" href="index.html"><img src="resimler/logo.png" width="75" height="75"></a>
+      <button class="pBar" onclick="barClick()"><i class="fa-solid fa-bars"></i></button>
+      <p>Penguinnni</p></div>
     <div class="kutular">
+        <div class="menu"><a href="index.html">Ana Sayfa</a></div>
+        <div class="menu"><a href="destek.html">Destek</a></div>
+        <div class="menu"><a href="indir.html">İndir</a></div>
+        <div class="menu"><a href="hakkimizda.html">Hakkımızda</a></div>
     </div>
-    <div class="login"><a href="login.html">Kayıt Ol</a><a href="login.html"><button>Oturum Aç</button></a></div>
-</div>
-
-<div class="pen-title">
-  <h2>Hoşgeldiniz</h2>
-</div>
+    <div class="login"><a id="qfcx8" href="login.html"><i class="fi fi-rr-user-add"></i> Kayıt Ol</a><a href="login.html"><button><i class="fi fi-rr-user"></i> Oturum Aç</button></a></div>
+  </div>
 <div class="container">
   <div class="card"></div>
   <div class="card">

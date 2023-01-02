@@ -1,7 +1,7 @@
 .player {
   width: 40vw;
-  float: left;
-  margin-bottom: 10%;
+  align-items: center;
+  flex-direction: column;
 }
 
 .details {
@@ -10,6 +10,8 @@
   flex-direction: column;
   justify-content: center;
   margin-top: 3%;
+  width: auto;
+  height: 25vw;
 }
 
 .track-art {
@@ -32,11 +34,12 @@
   animation: lights 5s 750ms linear infinite;
   text-align: center;
   cursor: pointer;
+  overflow: clip;
 }
 
 .track-artist {
   font-size: 1.2vw;
-      color: hsl(0, 0%, 51%);
+  color: hsl(0, 0%, 51%);
 }
 
 .buttons {
@@ -123,9 +126,9 @@ i.fa-play-circle, i.fa-pause-circle, i.fa-step-forward, i.fa-step-backward {
 @media (max-width: 768px) {
   .player{
     width: 100vw;
-    max-height: 20vh;
+    height: 25vh;
     background-color: rgba(0, 0, 0, 0.267);
-    margin: 0;
+    display: block;
   }
   .details {
     align-items:baseline;
@@ -177,5 +180,8 @@ i.fa-play-circle, i.fa-pause-circle, i.fa-step-forward, i.fa-step-backward {
   .seek_slider::-webkit-slider-thumb{
     width: 1.5vh;
     height: 1.5vh;
+  }
+  .details {
+    height: auto;
   }
 }

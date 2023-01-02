@@ -647,6 +647,30 @@ function getTracks2() {
     path: "music/slow/PastLives.opus",
     image: "resimler/qqqq.gif",
     spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",
+  },{
+    name: "Hope",
+    artist: "XXXTENTACION",
+    path: "music/slow/Hope.opus",
+    image: "resimler/manRed.webp",
+    spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",
+  },{
+    name: "Can I Call You Tonight",
+    artist: "Dayglow",
+    path: "music/slow/CanICallYouTonight.opus",
+    image: "resimler/loading.gif",
+    spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",
+  },{
+    name: "Blue Jeans",
+    artist: "Lana Del Rey",
+    path: "music/slow/BlueJeans.opus",
+    image: "resimler/loading.gif",
+    spotify_url: "https://www.youtube.com/playlist?list=PLL_v5eo2j3xZfGvyfxSdetCnMWduY7i61",
+  },{
+    name: "Aria Math",
+    artist: "C418 & The Dominator",
+    path: "music/slow/AriaMath.opus",
+    image: "resimler/note-blocks.webp",
+    spotify_url: "https://youtu.be/yiS0DPekSDQ",
   },]
   track_list = value;
   FillRandomTrackList(value);
@@ -683,96 +707,114 @@ function getTracks3() {
     path: "music/aot/GurenNoYumiy.opus",
     image: "resimler/aot-op1.webp",
     spotify_url: "https://youtu.be/8OkpRK2_gVs",
-  }, {
-    name: "The Rumbling",
-    artist: "S I M",
-    path: "music/aot/Rumbling.mp3",
-    image: "resimler/aot2.webp",
-    spotify_url: "https://youtu.be/KHCIO7a3jSI",
-  }, {
+  },{
     name: "Boku no Sensou",
     artist: "Shinsei Kamattechan",
     path: "music/aot/BokuNoSensou.mp3",
     image: "resimler/aot3.webp",
     spotify_url: "https://youtu.be/6TolbTZXDjI",
   },{
-    name: "Marley",
-    artist: "Hiroyuki Sawano",
-    path: "music/aot/Marley.opus",
-    image: "resimler/black.gif",
-    spotify_url: "https://youtu.be/_nm_T0qjwjc",
-  }, {
+    name: "The Rumbling",
+    artist: "S I M",
+    path: "music/aot/Rumbling.opus",
+    image: "resimler/aot2.webp",
+    spotify_url: "https://youtu.be/KHCIO7a3jSI",
+  },{
     name: "Shingeki no Kyojin Violin",
     artist: "Hiroyuki Sawano",
     path: "music/aot/ShingekiNoKyojinViolin.opus",
     image: "resimler/petra.webp",
     spotify_url: "https://youtu.be/nAV_zyhC4EE",
-  }, {
+  },{
     name: "Shingeki no Kyojin Piano",
     artist: "Hiroyuki Sawano",
     path: "music/aot/ShingekiNoKyojinPiano-part1.opus",
     image: "resimler/aot-eren2.webp",
     spotify_url: "https://youtu.be/nAV_zyhC4EE",
-  }, {
+  },{
     name: "Shingeki no Kyojin Piano 2",
     artist: "Hiroyuki Sawano",
     path: "music/aot/ShingekiNoKyojinPiano-part2.mp3",
     image: "resimler/aotK.webp",
     spotify_url: "https://youtu.be/IPWiiR5MVv4",
-  }, {
+  },{
     name: "Shingeki no Kyojin Major",
     artist: "Hiroyuki Sawano",
     path: "music/aot/ShingekiNoKyojinMajor.mp3",
     image: "resimler/at.gif",
     spotify_url: "https://youtu.be/0gf3o3bhbCE",
-  }, {
+  },{
     name: "Impact",
     artist: "Yuko Ando",
     path: "music/aot/Impact.mp3",
     image: "resimler/aot.gif",
     spotify_url: "https://youtu.be/oyuoCB-wolk",
-  }, {
+  },{
+    name: "Akuma no ko",
+    artist: "Ai Higuchi",
+    path: "music/aot/AkumaNoKo.opus",
+    image: "resimler/aot-erenK.webp",
+    spotify_url: "https://youtu.be/rId62CdFGg4",
+  },{
     name: "Guilty Hero",
     artist: "Kohta Yamamoto",
     path: "music/aot/GuiltyHero.m4a",
     image: "resimler/yelena.webp",
     spotify_url: "https://youtu.be/-q41OJu9fXM",
-  }, {
+  },{
     name: "Eye Water",
     artist: "Hiroyuki Sawano",
     path: "music/aot/eye-water.opus",
     image: "resimler/eren-mikasa.jpg",
     spotify_url: "https://youtu.be/YbJpH9to-9Y",
-  }, {
+  },{
     name: "Sasha",
     artist: "Hiroyuki Sawano",
     path: "music/aot/Sasha.ogg",
     image: "resimler/sasha.jpg",
     spotify_url: "https://youtu.be/eLYVoUl6Z1Q",
-  }, {
+  },{
     name: "Mikasa",
     artist: "Hiroyuki Sawano",
     path: "music/aot/mikasa.opus",
     image: "resimler/mikasa.webp",
     spotify_url: "https://youtu.be/47RK0qI2DiI",
-  }, {
+  },{
     name: "Historia",
     artist: "Hiroyuki Sawano",
     path: "music/aot/historia.opus",
     image: "resimler/historia.gif",
     spotify_url: "https://youtu.be/vtHUnElgkD8",
-  }, {
+  },{
     name: "AttackD",
     artist: "Hiroyuki Sawano",
     path: "music/aot/attackd.opus",
     image: "resimler/aot-eren.gif",
     spotify_url: "https://youtu.be/c7NMfDeIMHs",
-  }, {
+  },{
     name: "ThanksAT",
     artist: "Samuel Kim",
     path: "music/aot/ThanksAT.opus",
     image: "resimler/eren.gif",
     spotify_url: "https://youtu.be/hoJ4qxcXz5w",
+  },{
+    name: "Utsukushiki Zankoku na Sekai",
+    artist: "Minachu",
+    path: "music/aot/UtsukushikiZankokuNaSekai.opus",
+    image: "resimler/aot-ceket.webp",
+    spotify_url: "https://youtu.be/Lw7xJ5fXDhg",
+  },{
+    name: "Ashes On The Fire",
+    artist: "Kohta Yamamoto",
+    path: "music/aot/AshesOnTheFire.opus",
+    image: "resimler/aot-ceket.webp",
+    spotify_url: "https://youtu.be/am8dr5lNMjc",
+  },{
+    name: "Marley",
+    artist: "Hiroyuki Sawano",
+    path: "music/aot/Marley.opus",
+    image: "resimler/attack-on-titan-gabi.webp",
+    spotify_url: "https://youtu.be/_nm_T0qjwjc",
   },]
   track_list = value;
   FillRandomTrackList(value);
