@@ -306,9 +306,18 @@ text-shadow:
         margin-left: 25%; 
     }
     .penguinnni{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         text-align: center;
         font-size: 300%;
         padding: 0;
+        width: 90vw;
+        height: 10vh;
+    }
+    .penguinnni p{
+        padding-left: 0vw; 
+        font-size: 50px;
     }
     .menu,.pLogo,#qfcx8,.login,.playlist-img,.playlist,.marquee,.kutular{
         display: none;
@@ -324,14 +333,14 @@ text-shadow:
     .left{
         font-size: 3vw;
         width: 100vw;
-        height: 75vh;
+        height: 70vh;
         margin: 0;
         padding: 0;
     }
     .leftAna{
         font-size: 3vw;
         width: 100%;
-        height: 75vh;
+        height: 70vh;
         margin: 0;
         padding: 0;
     }
@@ -369,7 +378,7 @@ text-shadow:
         color: black;
         background-color: rgb(192, 16, 16);
         cursor: pointer;
-        font-size: 50%;
+        font-size: 25px;
         border-radius: 10px;
         display: block;
     }
@@ -379,7 +388,7 @@ text-shadow:
     #qqa7 button{
         height: 50px;
         width: 50px;
-        font-size: 150%;
+        font-size: 25px;
         border-radius: 10px;
         border: transparent;
     }
@@ -399,5 +408,9 @@ text-shadow:
       }
     .penguinnni{
         font-size: 200%;
+    }
+    .penguinnni p{
+        padding-left: 0vw; 
+        font-size: 30px;
     }
 }

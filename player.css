@@ -126,7 +126,7 @@ i.fa-play-circle, i.fa-pause-circle, i.fa-step-forward, i.fa-step-backward {
 @media (max-width: 768px) {
   .player{
     width: 100vw;
-    height: 25vh;
+    height: 30vh;
     background-color: rgba(0, 0, 0, 0.267);
     display: block;
   }
